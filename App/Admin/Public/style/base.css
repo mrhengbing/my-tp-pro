@@ -1,0 +1,79 @@
+﻿/* CSS reset */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0;}
+table{border-collapse:collapse;border-spacing:0;}
+fieldset,img {border:0;}
+address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}
+ol,ul {list-style:none;}
+capation,th{text-align:left;}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
+q:before, q:after{content:''}
+abbr,acronym{border:0;}
+a,input{outline: none;}
+body{font-size:14px; font-family:"微软雅黑";}
+body a{ text-decoration:none;}
+/* 文字排版 */ 
+.f12{font-size:12px;}
+.f13{font-size:13px;}
+.f14{font-size:14px;}
+.f16{font-size:16px;}
+.f20{font-size:20px;}
+.fb{font-weight:bold;}
+.fn{font-weight:normal;}
+.t2{text-indent:2em;}
+.lh150{line-height:150%}
+.lh180{line-height:180%}
+.lh200{line-height:200%}
+.unl{text-decoration:underline;}
+.no_unl{text-decoration:none;}
+
+/* 定位 */
+.tl{text-align:left;}
+.tc{text-align:center;}
+.tr{text-align:right;}
+.bc{margin-left:auto;margin-right:auto;}
+.fl{float:left;display:inline;}  /* 可修复IE6中双倍边距bug */
+.fr{float:right;display:inline;}
+.cb{clear:both;}
+.cl{clear:left;}
+.cr{clear:right;}
+.clearfix:after{content:'.';display:block;height:0;clear:both;visibility:hidden}
+.clearfix{display:inline-block;}
+* html .clearfix{height:1%}
+. clearfix{display:block;}
+.pr{position:relative;}
+.pa{position:absolute;}
+.abs-right{position:absolute;right:0;}
+.zoom{zoom:1}
+.hidden{visibility:hidden;}
+.none{display:none;}
+
+/*-logo-*/
+body,html{width:100%; height:100%;}
+.bg{width:100%; height:100%; overflow: hidden; background:url(../images/images/bb.jpg) no-repeat top center; background-size:cover;}
+.login-top{width:840px; height:78%; padding-top:15%; margin-left:26%;}
+.login-top h1{float:left;}
+.slideBox{width:420px; height:30px; line-height: 30px; float:left; background:url(../images/images/gbgg.png) repeat; 
+border-radius:30px; -webkit-border-radius:30px; -moz-border-radius:30px; position: relative; overflow: 
+hidden; color:#fff; margin-top:35px; margin-left:40px;}
+.slideBox .bd{width:346px; float:left; margin-left:16px;}
+.slideBox .bd ul li{width:346px; height:30px; line-height:30px; overflow:hidden; font-size:16px; color:#b0b7c5;}
+.slideBox .labar{width:25px; height:18px; display: block; 
+background: url(../images/images/loginicon.png) no-repeat 0 0; float:left; margin:6px 0 0 10px;}
+.frm{width:100%; margin-top:25px;}
+.frm ul li{float:left; margin-right:9px;}
+.frm ul li input{float:left; color:#c6d0dd;}
+.frm ul li.w300{width:300px; height:50px; line-height: 50px; background: #819bbc;}
+.frm ul li.w106{width:106px; height:50px; line-height: 50px; background:#819bbc; position:relative;}
+.frm ul li.w300 .lbname{float:left; height:28px; line-height: 28px;
+ background:url(../images/images/loginicon.png) no-repeat 0 -21px; padding-left:45px; 
+ font-size:18px; color:#c6d0dd; margin-left:15px; margin-top:10px;}
+ .frm ul li.w300 .pwlb{float:left; height:28px; line-height: 28px;
+ background:url(../images/images/loginicon.png) no-repeat 0 -53px; padding-left:45px; font-size:18px;
+  color:#c6d0dd; margin-left:15px; margin-top:10px;}
+ .frm ul li.w300 input{width:215px; height:30px; *line-height:40px; margin-top:10px; border:none; margin-left:5px; background:none; font-size:16px; padding-left:8px;}
+ .frm ul li.w106 input{width:106px; height:50px; *line-height:50px; text-align:center; font-size:18px; color:#c6d0dd; font-size:18px;}
+ .frm ul li.w106 input.yzm{border:none; background: none;}
+.frm ul li.w106 input.btn{background:#163e73; border:none; cursor: pointer; font-size:24px; color:#fff;}
+.frm ul li.last{margin-right:0;}
+.copyright{width:100%; position:fixed; left:0; bottom:3%; text-align:center; font-size:18px; color:#fff;}
+.frm ul li.w106 div{width:106px; height:50px; text-align: center; position: absolute; left:0; top:50px; background: red; display: none;}

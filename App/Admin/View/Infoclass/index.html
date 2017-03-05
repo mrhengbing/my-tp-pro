@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>栏目管理</title>
+<link href="__PUBLIC__/style/admin.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="__PUBLIC__/js/jquery.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/forms.func.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/listajax.js"></script>
+</head>
+<body>
+<div class="topToolbar"> <span class="title">栏目管理</span> <a href="javascript:location.reload();" class="reload">刷新</a></div>
+<form name="form" id="form" method="post" action="">
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" class="dataTable">
+        <tr align="left" class="head">
+            <td width="5%" height="36" class="firstCol"><input type="checkbox" name="checkid" onclick="CheckAll(this.checked);" /></td>
+            <td width="3%">ID</td>
+            <td width="40%">栏目名称</td>
+            <td width="20%" align="center">排序</td>
+            <td width="32%" class="endCol">操作</td>
+        </tr>
+    </table>
+  <foreach name="infoclass" item="v">
+        <div rel="rowpid_{$v.parentstr|getTopID}">
+        <table width="100%" border="0" cellpadding="0" cellspacing="0" class="dataTable">
+            <tr align="left" class="dataTr">
+                <td width="5%" height="36" class="firstCol">
+                    <input type="checkbox" name="checkid[]" id="checkid[]" value="{$v.id}" />
+                </td>
+                <td width="3%">
+                    {$v.id} <input type="hidden" name="id[]" id="id[]" value="{$v.id}" />
+                </td>
+                <td width="40%">
+                    <if condition="$v['parentid'] eq '0'">
+                        <span class="minusSign" id="rowid_{$v.id}" onclick="DisplayRows({$v.id});">
+                            <a href="javascript:void(0)" title="点击添加内容">{$v.classname}</a>
+                        </span>
+                    <else />
+                        {$v.html}
+                        <span class="subType">
+                            <a href="javascript:void(0)" title="点击添加内容">{$v.classname}</a>
+                        </span>
+                    </if>
+                    <span class="infoTypeTxt"> <i title="栏目属于[单页]类型">[单页]</i></span>
+                </td>
+                <td width="20%" align="center">           
+                    <input type="text" name="orderid" id="orderid_{$v.id}" class="inputls" value="{$v.orderid}" onblur="updateOrderid({:U('updateOrderid', '', '')},{$v.id})" />
+                </td>
+                <td width="32%" class="action endCol">
+                    <span><a href="{:U('infoclassAdd', array('id'=>$v['id']))}">添加子栏目</a></span> | 
+                    <span><a href="javascript:location.reload();" onclick="check({$v.id});" title="点击进行显示与隐藏操作">
+                    <if condition="$v['checkinfo'] eq 'true'">
+                    显示
+                    <else />
+                    隐藏
+                    </if>
+                    </a></span> | 
+                    <span><a href="{:U('infoclassUpdate', array('id'=>$v['id']))}">修改</a></span> | 
+                    <span class="nb"><a href="{:U('delClass', array('id'=>$v['id']))}" onclick="return ConfDel(2);">删除</a></span>
+                </td>
+            </tr>
+        </table>
+    </div>
+</foreach>
+          
+</form>
+<div class="bottomToolbar"> 
+    <span class="selArea"><span>选择：</span> 
+    <a href="javascript:CheckAll(true);">全部</a> - 
+    <a href="javascript:CheckAll(false);">无</a> - 
+    <a href="javascript:SubUrlParam('{:U('delAllClass')}');" onclick="return ConfDelAll(1);">删除</a>　
+    <span>操作：</span><a href="javascript:location.reload();">排序</a> - 
+    <a href="javascript:ShowAllRows();">展开</a> - 
+    <a href="javascript:HideAllRows();">隐藏</a></span> 
+    <a href="{:U('infoclassAdd')}" class="dataBtn">添加网站栏目</a> 
+</div>
+<div class="page">
+    <div class="pageText">共有<span>{$count}</span>条记录</div>
+</div>
+
+<script type="text/javascript">
+function check(id){
+    $.ajax({
+        url : "{:U('check', '', '')}/id/"+id,
+        type:'get'
+    });
+}
+</script>
+</body>
+</html>

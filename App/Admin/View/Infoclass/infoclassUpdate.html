@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>修改栏目</title>
+<link href="__PUBLIC__/style/admin.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="__PUBLIC__/js/jquery.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/checkf.func.js"></script>
+<script type="text/javascript">
+function tabs(tabobj, obj)
+{
+    $("#"+tabobj+" li[id^="+tabobj+"]").each(function(i){
+        if(tabobj+"_title"+i == obj.id)
+        {
+            $("#"+tabobj+"_title"+i).attr("class","on");
+            $("#"+tabobj+"_content"+i).show();
+        }
+        else
+        {
+            $("#"+tabobj+"_title"+i).attr("class","");
+            $("#"+tabobj+"_content"+i).hide();
+        }
+    });
+}
+</script>
+</head>
+<body>
+<div class="formHeader"> <span class="title">修改栏目</span> <a href="javascript:location.reload();" class="reload">刷新</a> </div>
+<div class="toolbarTab">
+    <ul id="tabs">
+        <li id="tabs_title0" onclick="tabs('tabs',this);" class="on"><a href="javascript:;">栏目信息</a></li>
+        <li class="line">-</li>
+        <li id="tabs_title1" onclick="tabs('tabs',this);" class=""><a href="javascript:;">栏目详情</a></li><li class="line">-</li>
+        <li id="tabs_title2" onclick="tabs('tabs',this);" class=""><a href="javascript:;">SEO</a></li>
+    </ul>
+</div>
+
+<form name="form" id="form" method="post" action="{:U('infoclassUpdateSave')}" onsubmit="return cfm_infoclass();" enctype='multipart/form-data'>
+    <div class="" id="tabs_content0"> 
+        <table width="80%" border="0" cellspacing="0" cellpadding="0" class="formTable">
+            <tr>
+                <td width="20%" height="50" align="right">栏目类型：</td>
+                <td width="380">
+                    <select name="infotype" id="infotype">
+                        <option value="0" <if condition="$classInfo['infotype'] eq 0">selected="selected"</if>>单页</option>
+                        <option value="1" <if condition="$classInfo['infotype'] eq 1">selected="selected"</if>>文章列表</option>
+                        <option value="2" <if condition="$classInfo['infotype'] eq 2">selected="selected"</if>>图片列表</option>       
+                    </select>
+                    <span class="maroon">*</span></td>
+                <td><span class="cnote">带<span class="maroon">*</span>号表示为必填项</span></td>
+            </tr>
+            <tr>
+                <td height="50" align="right">所属栏目：</td>
+                <td><select name="parentid" id="parentid" onchange="GetCatpSize(this.value);">
+                        <option value="0">一级栏目</option>
+                        <foreach name="classList" item="v">
+                            <option value="{$v.id}" <if condition="$classInfo['parentid'] eq $v['id']">selected="selected"</if>>{$v.html}{$v.classname}</option>
+                        </foreach>
+                    </select>
+                    <span class="maroon">*</span></td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td height="50" align="right">栏目名称：</td>
+                <td><input name="classname" type="text" id="classname" class="input" value="{$classInfo.classname}" />
+                    <span class="maroon">*</span></td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td height="120" align="right">缩略图片：</td>
+                <td><input name="picurl" type="file" id="picurl" class="input" value="{$classInfo.picurl}" />
+                    </td>
+                <td><if condition="$classInfo['picurl'] neq ''"><img src="__ROOT__/Uploads/{$classInfo.picurl}" alt="" height="100" /></if></td>
+            </tr>
+            <tr>
+                <td height="50" align="right">排列排序：</td>
+                <td><input type="text" name="orderid" id="orderid" class="inputs" value="14" value="{$classInfo.orderid}" /></td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr class="nb">
+                <td height="50" align="right">隐藏栏目：</td>
+                <td><input type="radio" name="checkinfo" value="true" <if condition="$classInfo['checkinfo'] eq 'true'">checked="checked"</if>  />
+                    显示&nbsp;
+                    <input type="radio" name="checkinfo" value="false" <if condition="$classInfo['checkinfo'] eq 'false'">checked="checked"</if> />
+                    隐藏</td>
+                <td>&nbsp;</td>
+            </tr>
+        </table>
+    </div>
+<div class="undis" id="tabs_content1"> 
+    <table width="80%" border="0" cellspacing="0" cellpadding="0" class="formTable">
+       
+        <tr>
+            <td width="20%" height="118" align="right">详细内容：</td>
+            <td><textarea name="description" id="description" class="textarea">{$classInfo.description}</textarea></td>
+            <td>&nbsp;</td>
+        </tr>
+    </table>
+</div>
+<div class="undis" id="tabs_content2"> 
+    <table width="80%" border="0" cellspacing="0" cellpadding="0" class="formTable">
+        <tr>
+            <td width="20%" height="50" align="right">SEO标题：</td>
+            <td><input type="text" name="seotitle" id="seotitle" class="input" value="{$classInfo.seotitle}" /></td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td height="50" align="right">关键词：</td>
+            <td><input type="text" name="keywords" id="keywords" class="input" value="{$classInfo.keywords}" /></td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td height="118" align="right">栏目描述：</td>
+            <td><textarea name="description" id="description" class="textarea">{$classInfo.description}</textarea></td>
+            <td>&nbsp;</td>
+        </tr>
+    </table>
+</div>
+    <div class="formSubBtn">
+        <input type="submit" class="submit" value="提交" />
+        <input type="button" class="back" value="返回" onclick="history.go(-1);" />
+        <input type="hidden" name="id" id="id" value="{$classInfo.id}" />
+        <input type="hidden" name="repid" id="repid" value="{$classInfo.parentid}" />
+    </div>
+</form>
+</body>
+</html>

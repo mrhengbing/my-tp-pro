@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>管理员管理</title>
+<link href="__PUBLIC__/style/admin.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="__PUBLIC__/js/jquery.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/forms.func.js"></script>
+</head>
+<body>
+<div class="topToolbar"> <span class="title">回收站</span> <span class="rec title"><a href="{:U('index')}">返回列表</a></span> <a href="javascript:location.reload();" class="reload">刷新</a></div>
+<table width="100%" border="0" cellpadding="0" cellspacing="0" class="dataTable">
+    <tr align="left" class="head">
+        <td width="5%" height="36" class="firstCol">ID</td>
+        <td width="25%">用户名</td>
+        <td width="20%">管理员组</td>    
+        <td width="20%">登录时间</td>
+        <td width="15%">登录IP</td>
+        <td width="15%" class="endCol">操作</td>
+    <foreach name="list" item="v">
+        </tr>
+            <tr align="left" class="dataTr">
+            <td height="36" class="firstCol">{$v.id}</td>
+            <td>{$v.username}</td>
+            <td>{$v.groupname}</td>  
+            <td class="number">{$v.logintime|date="Y-m-d H:i:s",###}</td>
+            <td>{$v.loginip}</td>
+            <td class="action endCol">
+                <span><a href="{:U('adminRestore ', array('id'=>$v['id']))}">还原</a></span>
+                <span><a href="{:U('adminDel', array('id'=>$v['id']))}" onclick="if(confirm('你确定要彻底删除该信息吗？')) return true;else return false;">彻底删除</a></span></td>
+        </tr>
+    </foreach>
+    </table>
+<div class="page"> <div class="pageList">{$page}</div> </div>
+</body>
+</html>

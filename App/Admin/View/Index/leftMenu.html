@@ -1,0 +1,51 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>左侧菜单</title>
+<link href="__PUBLIC__/style/menu.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="__PUBLIC__/js/jquery.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/tinyscrollbar.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/leftmenu.js"></script>
+</head>
+<body>
+
+
+<div class="tGradient"></div>
+<div id="scrollmenu">
+    <div class="scrollbar">
+        <div class="track">
+            <div class="thumb">
+                <div class="end"></div>
+            </div>
+        </div>
+    </div>
+    <div class="viewport">
+        <div class="overview"> 
+            <!--scrollbar start-->
+            <div class="menubox">
+                <div class="title on" id="t1" onclick="DisplayMenu('leftmenu01');" title="点击切换显示或隐藏"> 网站系统管理 </div>
+                <div id="leftmenu01"> 
+                    <a href="{:U('Admin/index')}" target="main">管理员管理</a>
+                    <a href="{:U('Admin/adminGroup')}" target="main">管理员组管理</a>
+                </div>
+            </div>
+            <div class="hr_5"></div>
+            <div class="menubox">
+                <div class="title" onclick="DisplayMenu('leftmenu02');" title="点击切换显示或隐藏"> 栏目内容管理 </div>
+                <div id="leftmenu02" style="display:none">
+                     <a href="{:U('Infoclass/index')}" target="main">栏目管理</a> 
+                    <a href="{:U('Infolist/index')}" target="main">文章信息管理</a>
+                     <a href="{:U('Infoflag/index')}" target="main">文章属性管理</a> 
+                     </div>
+            </div>
+         
+        </div>
+    </div>
+</div>
+<div class="bGradient"></div>
+
+
+</body>
+</html>
