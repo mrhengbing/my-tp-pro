@@ -1,0 +1,18 @@
+[ 2016-04-25T22:48:30+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/index.html
+ERR: 模板不存在:./App/Admin/View/Infoclass/index.html
+
+[ 2016-04-25T22:49:29+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/infolist_add.php?cid=4
+ERR: 非法操作:infolist_add.php
+
+[ 2016-04-25T22:50:59+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/infoclass_add.php
+ERR: 非法操作:infoclass_add.php
+
+[ 2016-04-25T22:51:06+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/infoclass_save.php?action=down&id=1&parentid=0&orderid=1
+ERR: 非法操作:infoclass_save.php
+
+[ 2016-04-25T22:54:13+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/infoclass_add.php
+ERR: 非法操作:infoclass_add.php
+
+[ 2016-04-25T22:55:57+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/plugin/uploadify/index.php?title=%E7%BC%A9%E7%95%A5%E5%9B%BE%E4%B8%8A%E4%BC%A0&type=image&desc=image&num=1&size=2097152&frame=uploadify&input=picurl&area=undefined
+ERR: 非法操作:plugin
+

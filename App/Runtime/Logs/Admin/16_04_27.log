@@ -1,0 +1,37 @@
+[ 2016-04-27T21:22:30+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/infoclassAdd.html
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT `id` FROM `db_infoclass` WHERE ( id= ) LIMIT 1  
+
+[ 2016-04-27T21:23:01+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/infoclassAdd.html
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT `id` FROM `db_infoclass` WHERE ( id= ) LIMIT 1  
+
+[ 2016-04-27T21:23:16+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/infoclassAdd.html
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT `id` FROM `db_infoclass` WHERE ( id= ) LIMIT 1  
+
+[ 2016-04-27T21:23:17+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/infoclassAdd.html
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT `id` FROM `db_infoclass` WHERE ( id= ) LIMIT 1  
+
+[ 2016-04-27T21:25:13+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/infoclass_save.php
+ERR: 非法操作:infoclass_save.php
+
+[ 2016-04-27T21:25:57+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/infoclass_save.php
+ERR: 非法操作:infoclass_save.php
+
+[ 2016-04-27T21:26:00+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/infoclass_save.php
+ERR: 非法操作:infoclass_save.php
+
+[ 2016-04-27T22:18:26+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/ajax_do.php?action=catpsize&pid=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 非法操作:ajax_do.php
+
+[ 2016-04-27T22:18:31+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/ajax_do.php?action=catpsize&pid=3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 非法操作:ajax_do.php
+

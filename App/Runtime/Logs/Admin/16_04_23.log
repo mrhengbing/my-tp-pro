@@ -1,0 +1,24 @@
+[ 2016-04-23T21:28:20+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Login/2
+ERR: 非法操作:2
+
+[ 2016-04-23T21:30:27+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Login/AdminLogin/login
+ERR: 非法操作:AdminLogin
+
+[ 2016-04-23T21:30:44+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Login/Admin/Login/login
+ERR: 非法操作:Admin
+
+[ 2016-04-23T21:32:21+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Login/Admin/Login/index
+ERR: 非法操作:Admin
+
+[ 2016-04-23T21:32:37+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Login/Admin/Login/index
+ERR: 非法操作:Admin
+
+[ 2016-04-23T21:59:09+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Login/login
+ERR: Think\Model:sava方法不存在！
+
+[ 2016-04-23T22:12:14+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Login/Login/2
+ERR: 页面不存在！
+
+[ 2016-04-23T23:17:54+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Login/logout
+ERR: 非法操作:logout
+

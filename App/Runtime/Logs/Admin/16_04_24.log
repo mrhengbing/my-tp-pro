@@ -1,0 +1,75 @@
+[ 2016-04-24T15:35:26+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Admin/index
+ERR: 模板不存在:./App/Admin/View/Admin/index.html
+
+[ 2016-04-24T15:35:47+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Login/verify.html/0.4127306679038807
+ERR: 非法操作:verify.html
+
+[ 2016-04-24T15:37:04+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Login/verify.html/0.12511926630405823
+ERR: 非法操作:verify.html
+
+[ 2016-04-24T15:37:09+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Login/verify.html/0.39974577954857704
+ERR: 非法操作:verify.html
+
+[ 2016-04-24T15:37:20+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Login/verify.html/0.056443881090106895
+ERR: 非法操作:verify.html
+
+[ 2016-04-24T15:38:02+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Admin/index.html
+ERR: 模板不存在:./App/Admin/View/Admin/index.html
+
+[ 2016-04-24T15:39:24+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Admin/style/admin.css
+ERR: 非法操作:style
+
+[ 2016-04-24T15:39:24+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Admin/js/jquery.min.js
+ERR: 非法操作:js
+
+[ 2016-04-24T15:39:25+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Admin/js/forms.func.js
+ERR: 非法操作:js
+
+[ 2016-04-24T15:53:38+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Admin/templates/js/jquery.min.js
+ERR: 非法操作:templates
+
+[ 2016-04-24T15:53:38+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Admin/templates/js/checkf.func.js
+ERR: 非法操作:templates
+
+[ 2016-04-24T15:53:39+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Admin/templates/style/admin.css
+ERR: 非法操作:templates
+
+[ 2016-04-24T16:00:27+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Admin/admin_update.php?id=1
+ERR: 非法操作:admin_update.php
+
+[ 2016-04-24T16:10:55+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Admin/admin_save.php
+ERR: 非法操作:admin_save.php
+
+[ 2016-04-24T17:22:11+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Admin/adminUpdateEdit/id/1.html
+ERR: 非法操作:adminUpdateEdit
+
+[ 2016-04-24T17:29:09+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Admin/adminSave.html
+ERR: 非法操作:adminSave
+
+[ 2016-04-24T17:30:05+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Admin/adminEdit.html
+ERR: 非法操作:adminEdit
+
+[ 2016-04-24T17:35:02+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Admin/adminDel/id/0.html
+ERR: 1146:Table 'xkcms.db_user' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `db_user`
+
+[ 2016-04-24T17:39:38+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Admin/adminUpdate/id/4.html
+ERR: 模板不存在:./App/Admin/View/Admin/adminUpdate.html
+
+[ 2016-04-24T20:02:21+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Index/main.html
+ERR: 非法操作:main
+
+[ 2016-04-24T20:30:35+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Admin/index.html
+ERR: 1054:Unknown column 'checkadmin' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `db_admin` WHERE ( checkadmin=true ) ORDER BY id asc LIMIT 10  
+
+[ 2016-04-24T21:22:02+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Admin/admingroup_save.php
+ERR: 非法操作:admingroup_save.php
+
+[ 2016-04-24T21:25:54+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Admin/adminGroupAddSave.html
+ERR: 1054:Unknown column 'groupname' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `db_admin` WHERE ( groupname="系统管理员" ) LIMIT 1  
+
+[ 2016-04-24T21:48:24+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Admin/adminGroupDel/id/5.html
+ERR: 非法操作:adminGroupDel
+

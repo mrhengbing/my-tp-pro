@@ -1,0 +1,60 @@
+[ 2017-03-05T15:46:28+08:00 ] 127.0.0.1 /myproject/index.php/Admin/Infolist/plugin/uploadify/index.php?title=%E7%BB%84%E5%9B%BE%E4%B8%8A%E4%BC%A0&type=image&desc=image&num=50&size=2097152&frame=uploadify2&input=picarr&area=picarr_area
+ERR: 非法操作:plugin
+
+[ 2017-03-05T15:48:12+08:00 ] 127.0.0.1 /myproject/index.php/Admin/Infolist/Plugin/uploadify/index.php?title=%E7%BC%A9%E7%95%A5%E5%9B%BE%E4%B8%8A%E4%BC%A0&type=image&desc=image&num=1&size=2097152&frame=uploadify&input=picurl&area=undefined
+ERR: 非法操作:Plugin
+
+[ 2017-03-05T15:51:44+08:00 ] 127.0.0.1 /myproject/index.php/Admin/Infolist/Plugin/uploadify1/index.php?title=%E7%BC%A9%E7%95%A5%E5%9B%BE%E4%B8%8A%E4%BC%A0&type=image&desc=image&num=1&size=2097152&frame=uploadify&input=picurl&area=undefined
+ERR: 非法操作:Plugin
+
+[ 2017-03-05T16:41:34+08:00 ] 127.0.0.1 /myproject/index.php/Admin/Infolist/infolistUpdate/Plugin/calendar/calendar-blue.css
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `db_infolist` WHERE ( id= ) LIMIT 1  
+
+[ 2017-03-05T16:41:44+08:00 ] 127.0.0.1 /myproject/index.php/Admin/Infolist/Plugin/calendar/calendar-blue.css
+ERR: 非法操作:Plugin
+
+[ 2017-03-05T16:42:13+08:00 ] 127.0.0.1 /myproject/index.php/Admin/Plugin/calendar/calendar-blue.css
+ERR: 无法加载控制器:Plugin
+
+[ 2017-03-05T16:42:23+08:00 ] 127.0.0.1 /myproject/index.php/Admin/Plugin/calendar/calendar-blue.css
+ERR: 无法加载控制器:Plugin
+
+[ 2017-03-05T16:46:16+08:00 ] 127.0.0.1 /myproject/index.php/Admin/Infolist/infolistUpdate/Plugin/calendar/calendar-blue.css
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `db_infolist` WHERE ( id= ) LIMIT 1  
+
+[ 2017-03-05T16:46:23+08:00 ] 127.0.0.1 /myproject/index.php/Admin/Infolist/infolistUpdate/Plugin/calendar/calendar-blue.css
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `db_infolist` WHERE ( id= ) LIMIT 1  
+
+[ 2017-03-05T16:46:33+08:00 ] 127.0.0.1 /myproject/index.php/Admin/Infolist/Plugin/calendar/calendar-blue.css
+ERR: 非法操作:Plugin
+
+[ 2017-03-05T16:46:41+08:00 ] 127.0.0.1 /myproject/index.php/Admin/Plugin/calendar/calendar-blue.css
+ERR: 无法加载控制器:Plugin
+
+[ 2017-03-05T18:04:09+08:00 ] 127.0.0.1 /myproject/index.php/Admin/Infolist/index.html
+ERR: 1054:Unknown column 'a' in 'where clause'
+ [ SQL语句 ] : SELECT `flagname` FROM `db_infoflag` WHERE ( flag=a ) LIMIT 1  
+
+[ 2017-03-05T18:04:21+08:00 ] 127.0.0.1 /myproject/index.php/Admin/Infolist/index.html
+ERR: 1054:Unknown column 'a' in 'where clause'
+ [ SQL语句 ] : SELECT `flagname` FROM `db_infoflag` WHERE ( flag=a ) LIMIT 1  
+
+[ 2017-03-05T18:05:00+08:00 ] 127.0.0.1 /myproject/index.php/Admin/Infolist/index.html
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '"a' ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT `flagname` FROM `db_infoflag` WHERE ( flag="a' ) LIMIT 1  
+
+[ 2017-03-05T18:05:00+08:00 ] 127.0.0.1 /myproject/index.php/Admin/Infolist/index.html
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '"a' ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT `flagname` FROM `db_infoflag` WHERE ( flag="a' ) LIMIT 1  
+
+[ 2017-03-05T18:20:25+08:00 ] 127.0.0.1 /myproject/index.php/Admin/Infolist/index.html
+ERR: 1054:Unknown column 'a' in 'where clause'
+ [ SQL语句 ] : SELECT `flagname` FROM `db_infoflag` WHERE ( flag=a ) LIMIT 1  
+
+[ 2017-03-05T18:21:15+08:00 ] 127.0.0.1 /myproject/index.php/Admin/Infolist/index.html
+ERR: 1054:Unknown column 'a' in 'where clause'
+ [ SQL语句 ] : SELECT `flagname` FROM `db_infoflag` WHERE ( flag=a ) LIMIT 1  
+

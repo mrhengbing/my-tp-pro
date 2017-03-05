@@ -1,0 +1,1061 @@
+[ 2016-05-05T22:00:07+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/upOrderid/id/1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0040s ]
+SQL: SELECT `orderid` FROM `db_infoclass` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `db_infoclass` SET `orderid`='1' WHERE ( id = 1 ) [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-05T22:00:09+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/upOrderid/id/1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0060s ]
+SQL: SELECT `orderid` FROM `db_infoclass` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: UPDATE `db_infoclass` SET `orderid`='2' WHERE ( id = 1 ) [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-05T22:00:46+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/check/id/4
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0300s ]
+SQL: SELECT `checkinfo` FROM `db_infoclass` WHERE ( id = 4 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `db_infoclass` SET `checkinfo`='false' WHERE ( id = 4 ) [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-05T22:00:48+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/check/id/4
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0050s ]
+SQL: SELECT `checkinfo` FROM `db_infoclass` WHERE ( id = 4 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `db_infoclass` SET `checkinfo`='true' WHERE ( id = 4 ) [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-05T22:02:00+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/upOrderid/id/1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0130s ]
+SQL: SELECT `orderid` FROM `db_infoclass` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `db_infoclass` SET `orderid`='3' WHERE ( id = 1 ) [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-05T22:02:03+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/upOrderid/id/1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0090s ]
+SQL: SELECT `orderid` FROM `db_infoclass` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `db_infoclass` SET `orderid`='4' WHERE ( id = 1 ) [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-05T22:02:06+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/downOrderid/id/1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0070s ]
+SQL: SELECT `orderid` FROM `db_infoclass` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `db_infoclass` SET `orderid`='3' WHERE ( id = 1 ) [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-05T22:02:08+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/downOrderid/id/1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0040s ]
+SQL: SELECT `orderid` FROM `db_infoclass` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `db_infoclass` SET `orderid`='2' WHERE ( id = 1 ) [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-05T22:03:53+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/downOrderid/id/1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0040s ]
+SQL: SELECT `orderid` FROM `db_infoclass` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `db_infoclass` SET `orderid`='1' WHERE ( id = 1 ) [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-05-05T22:04:51+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/upOrderid/id/4
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0070s ]
+SQL: SELECT `orderid` FROM `db_infoclass` WHERE ( id = 4 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `db_infoclass` SET `orderid`='1' WHERE ( id = 4 ) [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-05T22:05:01+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/upOrderid/id/5
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0040s ]
+SQL: SELECT `orderid` FROM `db_infoclass` WHERE ( id = 5 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `db_infoclass` SET `orderid`='1' WHERE ( id = 5 ) [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-05T22:05:03+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/upOrderid/id/5
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0060s ]
+SQL: SELECT `orderid` FROM `db_infoclass` WHERE ( id = 5 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `db_infoclass` SET `orderid`='2' WHERE ( id = 5 ) [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-05T22:07:31+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/upOrderid/id/8
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0040s ]
+SQL: SELECT `orderid` FROM `db_infoclass` WHERE ( id = 8 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `db_infoclass` SET `orderid`='1' WHERE ( id = 8 ) [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-05T22:07:33+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/upOrderid/id/8
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0080s ]
+SQL: SELECT `orderid` FROM `db_infoclass` WHERE ( id = 8 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `db_infoclass` SET `orderid`='2' WHERE ( id = 8 ) [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-05T22:07:36+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/upOrderid/id/7
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0170s ]
+SQL: SELECT `orderid` FROM `db_infoclass` WHERE ( id = 7 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `db_infoclass` SET `orderid`='1' WHERE ( id = 7 ) [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-05T22:07:41+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/downOrderid/id/8
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0070s ]
+SQL: SELECT `orderid` FROM `db_infoclass` WHERE ( id = 8 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `db_infoclass` SET `orderid`='1' WHERE ( id = 8 ) [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-05T22:07:45+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/upOrderid/id/9
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0050s ]
+SQL: SELECT `orderid` FROM `db_infoclass` WHERE ( id = 9 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `db_infoclass` SET `orderid`='1' WHERE ( id = 9 ) [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-05T22:07:48+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/upOrderid/id/9
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0040s ]
+SQL: SELECT `orderid` FROM `db_infoclass` WHERE ( id = 9 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `db_infoclass` SET `orderid`='2' WHERE ( id = 9 ) [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-05T22:07:51+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/upOrderid/id/9
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0040s ]
+SQL: SELECT `orderid` FROM `db_infoclass` WHERE ( id = 9 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `db_infoclass` SET `orderid`='3' WHERE ( id = 9 ) [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-05T22:08:49+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/upOrderid/id/7
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0040s ]
+SQL: SELECT `orderid` FROM `db_infoclass` WHERE ( id = 7 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `db_infoclass` SET `orderid`='1' WHERE ( id = 7 ) [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-05T22:08:53+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/upOrderid/id/7
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0040s ]
+SQL: SELECT `orderid` FROM `db_infoclass` WHERE ( id = 7 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `db_infoclass` SET `orderid`='2' WHERE ( id = 7 ) [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-05T22:08:57+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/upOrderid/id/7
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0040s ]
+SQL: SELECT `orderid` FROM `db_infoclass` WHERE ( id = 7 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `db_infoclass` SET `orderid`='3' WHERE ( id = 7 ) [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-05T22:09:02+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/downOrderid/id/7
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0040s ]
+SQL: SELECT `orderid` FROM `db_infoclass` WHERE ( id = 7 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `db_infoclass` SET `orderid`='2' WHERE ( id = 7 ) [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-05T22:09:06+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/downOrderid/id/7
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0050s ]
+SQL: SELECT `orderid` FROM `db_infoclass` WHERE ( id = 7 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `db_infoclass` SET `orderid`='1' WHERE ( id = 7 ) [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-05T22:09:08+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/downOrderid/id/7
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0040s ]
+SQL: SELECT `orderid` FROM `db_infoclass` WHERE ( id = 7 ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-05T22:09:11+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/upOrderid/id/7
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0040s ]
+SQL: SELECT `orderid` FROM `db_infoclass` WHERE ( id = 7 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `db_infoclass` SET `orderid`='2' WHERE ( id = 7 ) [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-05T22:09:13+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/upOrderid/id/7
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0050s ]
+SQL: SELECT `orderid` FROM `db_infoclass` WHERE ( id = 7 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `db_infoclass` SET `orderid`='3' WHERE ( id = 7 ) [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-05-05T22:09:14+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/upOrderid/id/7
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0060s ]
+SQL: SELECT `orderid` FROM `db_infoclass` WHERE ( id = 7 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `db_infoclass` SET `orderid`='4' WHERE ( id = 7 ) [ RunTime:0.0080s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-05-05T22:09:16+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/upOrderid/id/7
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0070s ]
+SQL: SELECT `orderid` FROM `db_infoclass` WHERE ( id = 7 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `db_infoclass` SET `orderid`='5' WHERE ( id = 7 ) [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-05T22:09:17+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/upOrderid/id/7
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0060s ]
+SQL: SELECT `orderid` FROM `db_infoclass` WHERE ( id = 7 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `db_infoclass` SET `orderid`='6' WHERE ( id = 7 ) [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-05T22:09:20+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/upOrderid/id/8
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.009001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012001s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0140s ]
+SQL: SELECT `orderid` FROM `db_infoclass` WHERE ( id = 8 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `db_infoclass` SET `orderid`='1' WHERE ( id = 8 ) [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2016-05-05T22:09:24+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/upOrderid/id/8
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0050s ]
+SQL: SELECT `orderid` FROM `db_infoclass` WHERE ( id = 8 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `db_infoclass` SET `orderid`='2' WHERE ( id = 8 ) [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-05T22:09:25+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/upOrderid/id/8
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0070s ]
+SQL: SELECT `orderid` FROM `db_infoclass` WHERE ( id = 8 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `db_infoclass` SET `orderid`='3' WHERE ( id = 8 ) [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-05T22:09:28+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/upOrderid/id/8
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0040s ]
+SQL: SELECT `orderid` FROM `db_infoclass` WHERE ( id = 8 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `db_infoclass` SET `orderid`='4' WHERE ( id = 8 ) [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.016001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.016001s ]
+
+[ 2016-05-05T22:09:33+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/upOrderid/id/1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0080s ]
+SQL: SELECT `orderid` FROM `db_infoclass` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `db_infoclass` SET `orderid`='1' WHERE ( id = 1 ) [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-05T22:09:36+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/upOrderid/id/1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0040s ]
+SQL: SELECT `orderid` FROM `db_infoclass` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `db_infoclass` SET `orderid`='2' WHERE ( id = 1 ) [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-05T22:09:37+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/upOrderid/id/1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0040s ]
+SQL: SELECT `orderid` FROM `db_infoclass` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `db_infoclass` SET `orderid`='3' WHERE ( id = 1 ) [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-05T22:09:47+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/upOrderid/id/4
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0070s ]
+SQL: SELECT `orderid` FROM `db_infoclass` WHERE ( id = 4 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `db_infoclass` SET `orderid`='1' WHERE ( id = 4 ) [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-05T22:09:51+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/upOrderid/id/4
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0060s ]
+SQL: SELECT `orderid` FROM `db_infoclass` WHERE ( id = 4 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `db_infoclass` SET `orderid`='2' WHERE ( id = 4 ) [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-05T22:09:54+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/upOrderid/id/5
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0110s ]
+SQL: SELECT `orderid` FROM `db_infoclass` WHERE ( id = 5 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `db_infoclass` SET `orderid`='1' WHERE ( id = 5 ) [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-05T22:10:03+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/upOrderid/id/9
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0050s ]
+SQL: SELECT `orderid` FROM `db_infoclass` WHERE ( id = 9 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `db_infoclass` SET `orderid`='1' WHERE ( id = 9 ) [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-05T22:10:05+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/upOrderid/id/9
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0080s ]
+SQL: SELECT `orderid` FROM `db_infoclass` WHERE ( id = 9 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `db_infoclass` SET `orderid`='2' WHERE ( id = 9 ) [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-05T22:10:05+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/upOrderid/id/9
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0040s ]
+SQL: SELECT `orderid` FROM `db_infoclass` WHERE ( id = 9 ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: UPDATE `db_infoclass` SET `orderid`='3' WHERE ( id = 9 ) [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-05-05T22:10:20+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/downOrderid/id/1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0050s ]
+SQL: SELECT `orderid` FROM `db_infoclass` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `db_infoclass` SET `orderid`='2' WHERE ( id = 1 ) [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2016-05-05T22:10:25+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/downOrderid/id/1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0120s ]
+SQL: SELECT `orderid` FROM `db_infoclass` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `db_infoclass` SET `orderid`='1' WHERE ( id = 1 ) [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-05-05T22:10:50+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/upOrderid/id/7
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0080s ]
+SQL: SELECT `orderid` FROM `db_infoclass` WHERE ( id = 7 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `db_infoclass` SET `orderid`='7' WHERE ( id = 7 ) [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-05T22:10:54+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/upOrderid/id/7
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0050s ]
+SQL: SELECT `orderid` FROM `db_infoclass` WHERE ( id = 7 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `db_infoclass` SET `orderid`='8' WHERE ( id = 7 ) [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-05T22:10:57+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/upOrderid/id/7
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0140s ]
+SQL: SELECT `orderid` FROM `db_infoclass` WHERE ( id = 7 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `db_infoclass` SET `orderid`='9' WHERE ( id = 7 ) [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-05T22:10:58+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/upOrderid/id/7
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0070s ]
+SQL: SELECT `orderid` FROM `db_infoclass` WHERE ( id = 7 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `db_infoclass` SET `orderid`='10' WHERE ( id = 7 ) [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2016-05-05T22:10:59+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/upOrderid/id/7
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0060s ]
+SQL: SELECT `orderid` FROM `db_infoclass` WHERE ( id = 7 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `db_infoclass` SET `orderid`='11' WHERE ( id = 7 ) [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-05-05T22:11:02+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/upOrderid/id/7
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0060s ]
+SQL: SELECT `orderid` FROM `db_infoclass` WHERE ( id = 7 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `db_infoclass` SET `orderid`='12' WHERE ( id = 7 ) [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-05T22:11:04+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/downOrderid/id/7
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0180s ]
+SQL: SELECT `orderid` FROM `db_infoclass` WHERE ( id = 7 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `db_infoclass` SET `orderid`='11' WHERE ( id = 7 ) [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-05T22:11:12+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/upOrderid/id/7
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0040s ]
+SQL: SELECT `orderid` FROM `db_infoclass` WHERE ( id = 7 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `db_infoclass` SET `orderid`='12' WHERE ( id = 7 ) [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-05T22:11:14+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/upOrderid/id/7
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0100s ]
+SQL: SELECT `orderid` FROM `db_infoclass` WHERE ( id = 7 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `db_infoclass` SET `orderid`='13' WHERE ( id = 7 ) [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-05-05T22:14:17+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/upOrderid/id/7
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0050s ]
+SQL: SELECT `orderid` FROM `db_infoclass` WHERE ( id = 7 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `db_infoclass` SET `orderid`='1' WHERE ( id = 7 ) [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-05T22:14:20+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/upOrderid/id/7
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0060s ]
+SQL: SELECT `orderid` FROM `db_infoclass` WHERE ( id = 7 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `db_infoclass` SET `orderid`='2' WHERE ( id = 7 ) [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2016-05-05T22:14:21+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/upOrderid/id/7
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0060s ]
+SQL: SELECT `orderid` FROM `db_infoclass` WHERE ( id = 7 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `db_infoclass` SET `orderid`='3' WHERE ( id = 7 ) [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-05T22:14:22+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/upOrderid/id/7
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0040s ]
+SQL: SELECT `orderid` FROM `db_infoclass` WHERE ( id = 7 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `db_infoclass` SET `orderid`='4' WHERE ( id = 7 ) [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-05T22:14:24+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/upOrderid/id/7
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0050s ]
+SQL: SELECT `orderid` FROM `db_infoclass` WHERE ( id = 7 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `db_infoclass` SET `orderid`='5' WHERE ( id = 7 ) [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-05T22:14:25+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/upOrderid/id/7
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0060s ]
+SQL: SELECT `orderid` FROM `db_infoclass` WHERE ( id = 7 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `db_infoclass` SET `orderid`='6' WHERE ( id = 7 ) [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-05T22:14:55+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/upOrderid/id/1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0060s ]
+SQL: SELECT `orderid` FROM `db_infoclass` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `db_infoclass` SET `orderid`='1' WHERE ( id = 1 ) [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-05T22:14:59+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/upOrderid/id/1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0040s ]
+SQL: SELECT `orderid` FROM `db_infoclass` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `db_infoclass` SET `orderid`='2' WHERE ( id = 1 ) [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-05T22:15:00+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/upOrderid/id/1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0080s ]
+SQL: SELECT `orderid` FROM `db_infoclass` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `db_infoclass` SET `orderid`='3' WHERE ( id = 1 ) [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-05T22:15:07+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/downOrderid/id/1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0050s ]
+SQL: SELECT `orderid` FROM `db_infoclass` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `db_infoclass` SET `orderid`='2' WHERE ( id = 1 ) [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-05T22:15:11+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/downOrderid/id/1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0090s ]
+SQL: SELECT `orderid` FROM `db_infoclass` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `db_infoclass` SET `orderid`='1' WHERE ( id = 1 ) [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-05T22:15:14+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/downOrderid/id/1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0090s ]
+SQL: SELECT `orderid` FROM `db_infoclass` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2016-05-05T22:15:16+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/downOrderid/id/1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0040s ]
+SQL: SELECT `orderid` FROM `db_infoclass` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-05T22:15:18+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/downOrderid/id/1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0050s ]
+SQL: SELECT `orderid` FROM `db_infoclass` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-05T22:15:20+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/downOrderid/id/1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0060s ]
+SQL: SELECT `orderid` FROM `db_infoclass` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-05T22:15:22+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/downOrderid/id/1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0060s ]
+SQL: SELECT `orderid` FROM `db_infoclass` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-05T22:15:25+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/downOrderid/id/1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0060s ]
+SQL: SELECT `orderid` FROM `db_infoclass` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-05T22:15:27+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/downOrderid/id/1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0050s ]
+SQL: SELECT `orderid` FROM `db_infoclass` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2016-05-05T22:15:33+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/upOrderid/id/4
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0040s ]
+SQL: SELECT `orderid` FROM `db_infoclass` WHERE ( id = 4 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `db_infoclass` SET `orderid`='1' WHERE ( id = 4 ) [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-05T22:15:38+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/upOrderid/id/4
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0050s ]
+SQL: SELECT `orderid` FROM `db_infoclass` WHERE ( id = 4 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `db_infoclass` SET `orderid`='2' WHERE ( id = 4 ) [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-05T22:15:47+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/upOrderid/id/4
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0050s ]
+SQL: SELECT `orderid` FROM `db_infoclass` WHERE ( id = 4 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `db_infoclass` SET `orderid`='3' WHERE ( id = 4 ) [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-05T22:15:50+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/upOrderid/id/4
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0050s ]
+SQL: SELECT `orderid` FROM `db_infoclass` WHERE ( id = 4 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `db_infoclass` SET `orderid`='4' WHERE ( id = 4 ) [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-05T22:30:37+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/updateOrderid/id/5
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0300s ]
+NOTIC: [8] Undefined variable: v E:\phpStudy\WWW\xkcms\App\Admin\Controller\InfoclassController.class.php 第 280 行.
+NOTIC: [8] Undefined variable: orderid E:\phpStudy\WWW\xkcms\App\Admin\Controller\InfoclassController.class.php 第 280 行.
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+ [ SQL语句 ] : UPDATE `db_infoclass` SET `orderid`=NULL WHERE ( id =  )
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+ [ SQL语句 ] : UPDATE `db_infoclass` SET `orderid`=NULL WHERE ( id =  )
+
+[ 2016-05-05T22:30:41+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/updateOrderid/id/5
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0070s ]
+NOTIC: [8] Undefined variable: v E:\phpStudy\WWW\xkcms\App\Admin\Controller\InfoclassController.class.php 第 280 行.
+NOTIC: [8] Undefined variable: orderid E:\phpStudy\WWW\xkcms\App\Admin\Controller\InfoclassController.class.php 第 280 行.
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+ [ SQL语句 ] : UPDATE `db_infoclass` SET `orderid`=NULL WHERE ( id =  )
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+ [ SQL语句 ] : UPDATE `db_infoclass` SET `orderid`=NULL WHERE ( id =  )
+
+[ 2016-05-05T22:30:49+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/updateOrderid/id/7
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0050s ]
+NOTIC: [8] Undefined variable: v E:\phpStudy\WWW\xkcms\App\Admin\Controller\InfoclassController.class.php 第 280 行.
+NOTIC: [8] Undefined variable: orderid E:\phpStudy\WWW\xkcms\App\Admin\Controller\InfoclassController.class.php 第 280 行.
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+ [ SQL语句 ] : UPDATE `db_infoclass` SET `orderid`=NULL WHERE ( id =  )
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+ [ SQL语句 ] : UPDATE `db_infoclass` SET `orderid`=NULL WHERE ( id =  )
+
+[ 2016-05-05T22:33:34+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/updateOrderid/id/5/orderid/1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0780s ]
+SQL: UPDATE `db_infoclass` SET `orderid`='5' WHERE ( id = 5 ) [ RunTime:0.0010s ]
+SQL: SELECT `orderid` FROM `db_infoclass` WHERE ( id = 5 ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-05T22:33:39+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/updateOrderid/id/9/orderid/2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0090s ]
+SQL: UPDATE `db_infoclass` SET `orderid`='9' WHERE ( id = 9 ) [ RunTime:0.0000s ]
+SQL: SELECT `orderid` FROM `db_infoclass` WHERE ( id = 9 ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-05T22:33:50+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/updateOrderid/id/1/orderid/2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0060s ]
+SQL: UPDATE `db_infoclass` SET `orderid`='1' WHERE ( id = 1 ) [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-05T22:34:29+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/updateOrderid/id/1/orderid/2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0080s ]
+SQL: UPDATE `db_infoclass` SET `orderid`='1' WHERE ( id = 1 ) [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-05T22:34:32+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/updateOrderid/id/1/orderid/2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0100s ]
+SQL: UPDATE `db_infoclass` SET `orderid`='1' WHERE ( id = 1 ) [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-05T22:34:38+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/updateOrderid/id/9/orderid/9
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0080s ]
+SQL: UPDATE `db_infoclass` SET `orderid`='9' WHERE ( id = 9 ) [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-05T22:34:43+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/updateOrderid/id/1/orderid/1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0070s ]
+SQL: UPDATE `db_infoclass` SET `orderid`='1' WHERE ( id = 1 ) [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-05T22:34:49+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/updateOrderid/id/1/orderid/1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0060s ]
+SQL: UPDATE `db_infoclass` SET `orderid`='1' WHERE ( id = 1 ) [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-05T22:34:58+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/updateOrderid/id/4/orderid/2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0060s ]
+SQL: UPDATE `db_infoclass` SET `orderid`='4' WHERE ( id = 4 ) [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-05T22:35:01+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/updateOrderid/id/5/orderid/3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0110s ]
+SQL: UPDATE `db_infoclass` SET `orderid`='5' WHERE ( id = 5 ) [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-05T22:35:03+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/updateOrderid/id/8/orderid/4
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0130s ]
+SQL: UPDATE `db_infoclass` SET `orderid`='8' WHERE ( id = 8 ) [ RunTime:0.0010s ]
+SQL: SELECT `orderid` FROM `db_infoclass` WHERE ( id = 8 ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-05T22:35:06+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/updateOrderid/id/9/orderid/5
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0110s ]
+SQL: UPDATE `db_infoclass` SET `orderid`='9' WHERE ( id = 9 ) [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-05T22:35:12+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/updateOrderid/id/1/orderid/1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0060s ]
+SQL: UPDATE `db_infoclass` SET `orderid`='1' WHERE ( id = 1 ) [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-05T22:35:15+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/updateOrderid/id/4/orderid/2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0070s ]
+SQL: UPDATE `db_infoclass` SET `orderid`='4' WHERE ( id = 4 ) [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-05T22:35:17+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/updateOrderid/id/5/orderid/3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0070s ]
+SQL: UPDATE `db_infoclass` SET `orderid`='5' WHERE ( id = 5 ) [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-05T22:35:18+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/updateOrderid/id/8/orderid/4
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0060s ]
+SQL: UPDATE `db_infoclass` SET `orderid`='8' WHERE ( id = 8 ) [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-05T22:35:21+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/updateOrderid/id/9/orderid/5
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0070s ]
+SQL: UPDATE `db_infoclass` SET `orderid`='9' WHERE ( id = 9 ) [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-05T22:35:26+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/updateOrderid/id/7/orderid/1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0060s ]
+SQL: UPDATE `db_infoclass` SET `orderid`='7' WHERE ( id = 7 ) [ RunTime:0.0010s ]
+SQL: SELECT `orderid` FROM `db_infoclass` WHERE ( id = 7 ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-05T22:42:54+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/plugin/uploadify/index.php?title=%E7%BC%A9%E7%95%A5%E5%9B%BE%E4%B8%8A%E4%BC%A0&type=image&desc=image&num=1&size=2097152&frame=uploadify&input=picurl&area=undefined
+ERR: 非法操作:plugin
+
+[ 2016-05-05T22:43:26+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/plugin/uploadify/index.php?title=%E7%BC%A9%E7%95%A5%E5%9B%BE%E4%B8%8A%E4%BC%A0&type=image&desc=image&num=1&size=2097152&frame=uploadify&input=picurl&area=undefined
+ERR: 非法操作:plugin
+
+[ 2016-05-05T22:43:35+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/plugin/uploadify/index.php?title=%E7%BC%A9%E7%95%A5%E5%9B%BE%E4%B8%8A%E4%BC%A0&type=image&desc=image&num=1&size=2097152&frame=uploadify&input=picurl&area=undefined
+ERR: 非法操作:plugin
+
+[ 2016-05-05T22:53:38+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Admin/index.html
+ERR: 1054:Unknown column 'create_time' in 'order clause'
+ [ SQL语句 ] : SELECT * FROM `db_admin` WHERE ( delstate=0 ) ORDER BY create_time LIMIT 0,25  
+

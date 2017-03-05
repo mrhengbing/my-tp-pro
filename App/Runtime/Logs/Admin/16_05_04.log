@@ -1,0 +1,268 @@
+[ 2016-05-04T21:30:24+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/check/id/1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0030s ]
+SQL: SELECT `checkinfo` FROM `db_infoclass` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `db_infoclass` SET `checkinfo`='false' WHERE ( id = 1 ) [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-04T21:30:26+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/check/id/1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0030s ]
+SQL: SELECT `checkinfo` FROM `db_infoclass` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `db_infoclass` SET `checkinfo`='true' WHERE ( id = 1 ) [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-04T21:30:28+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/check/id/4
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0060s ]
+SQL: SELECT `checkinfo` FROM `db_infoclass` WHERE ( id = 4 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `db_infoclass` SET `checkinfo`='false' WHERE ( id = 4 ) [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-04T21:30:31+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/check/id/1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0080s ]
+SQL: SELECT `checkinfo` FROM `db_infoclass` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: UPDATE `db_infoclass` SET `checkinfo`='false' WHERE ( id = 1 ) [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-04T21:30:33+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/check/id/4
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0050s ]
+SQL: SELECT `checkinfo` FROM `db_infoclass` WHERE ( id = 4 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `db_infoclass` SET `checkinfo`='true' WHERE ( id = 4 ) [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-04T21:30:35+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/check/id/1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0050s ]
+SQL: SELECT `checkinfo` FROM `db_infoclass` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `db_infoclass` SET `checkinfo`='true' WHERE ( id = 1 ) [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-05-04T21:43:17+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/check/id/1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0040s ]
+SQL: SELECT `checkinfo` FROM `db_infoclass` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `db_infoclass` SET `checkinfo`='false' WHERE ( id = 1 ) [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-04T21:43:19+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/check/id/1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0040s ]
+SQL: SELECT `checkinfo` FROM `db_infoclass` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `db_infoclass` SET `checkinfo`='true' WHERE ( id = 1 ) [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-04T21:44:49+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/infoclass_save.php?action=delallclass
+ERR: 非法操作:infoclass_save.php
+
+[ 2016-05-04T22:10:46+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/downOrderid/id/1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: infoclass E:\phpStudy\WWW\xkcms\App\Admin\Controller\InfoclassController.class.php 第 265 行.
+
+[ 2016-05-04T22:10:48+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/downOrderid/id/1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: infoclass E:\phpStudy\WWW\xkcms\App\Admin\Controller\InfoclassController.class.php 第 265 行.
+
+[ 2016-05-04T22:10:54+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/upOrderid/id/1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: infoclass E:\phpStudy\WWW\xkcms\App\Admin\Controller\InfoclassController.class.php 第 248 行.
+
+[ 2016-05-04T22:12:10+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/upOrderid/id/1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: infoclass E:\phpStudy\WWW\xkcms\App\Admin\Controller\InfoclassController.class.php 第 248 行.
+
+[ 2016-05-04T22:13:01+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/upOrderid/id/1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+NOTIC: [8] Undefined variable: infoclass E:\phpStudy\WWW\xkcms\App\Admin\Controller\InfoclassController.class.php 第 248 行.
+
+[ 2016-05-04T22:13:03+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/upOrderid/id/1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: infoclass E:\phpStudy\WWW\xkcms\App\Admin\Controller\InfoclassController.class.php 第 248 行.
+
+[ 2016-05-04T22:13:13+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/upOrderid/id/1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: infoclass E:\phpStudy\WWW\xkcms\App\Admin\Controller\InfoclassController.class.php 第 248 行.
+
+[ 2016-05-04T22:13:37+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/upOrderid/id/1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: infoclass E:\phpStudy\WWW\xkcms\App\Admin\Controller\InfoclassController.class.php 第 248 行.
+
+[ 2016-05-04T22:14:21+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/upOrderid/id/1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0040s ]
+SQL: SELECT `orderid` FROM `db_infoclass` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `db_infoclass` SET `orderid`='2' WHERE ( id = 1 ) [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-04T22:14:48+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/upOrderid/id/1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0380s ]
+SQL: SELECT `orderid` FROM `db_infoclass` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `db_infoclass` SET `orderid`='3' WHERE ( id = 1 ) [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-04T22:15:58+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/downOrderid/id/1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: infoclass E:\phpStudy\WWW\xkcms\App\Admin\Controller\InfoclassController.class.php 第 265 行.
+
+[ 2016-05-04T22:15:59+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/downOrderid/id/1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: infoclass E:\phpStudy\WWW\xkcms\App\Admin\Controller\InfoclassController.class.php 第 265 行.
+
+[ 2016-05-04T22:16:31+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/downOrderid/id/1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined variable: infoclass E:\phpStudy\WWW\xkcms\App\Admin\Controller\InfoclassController.class.php 第 265 行.
+
+[ 2016-05-04T22:16:33+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/downOrderid/id/1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: infoclass E:\phpStudy\WWW\xkcms\App\Admin\Controller\InfoclassController.class.php 第 265 行.
+
+[ 2016-05-04T22:16:34+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/upOrderid/id/1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0080s ]
+SQL: SELECT `orderid` FROM `db_infoclass` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `db_infoclass` SET `orderid`='4' WHERE ( id = 1 ) [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-04T22:17:01+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/downOrderid/id/1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: infoclass E:\phpStudy\WWW\xkcms\App\Admin\Controller\InfoclassController.class.php 第 265 行.
+
+[ 2016-05-04T22:17:07+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/downOrderid/id/1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: infoclass E:\phpStudy\WWW\xkcms\App\Admin\Controller\InfoclassController.class.php 第 265 行.
+
+[ 2016-05-04T22:17:33+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/downOrderid/id/1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: infoclass E:\phpStudy\WWW\xkcms\App\Admin\Controller\InfoclassController.class.php 第 265 行.
+
+[ 2016-05-04T22:18:11+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/downOrderid/id/1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0050s ]
+SQL: SELECT `orderid` FROM `db_infoclass` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `db_infoclass` SET `orderid`='3' WHERE ( id = 1 ) [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-04T22:18:13+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/downOrderid/id/1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0030s ]
+SQL: SELECT `orderid` FROM `db_infoclass` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `db_infoclass` SET `orderid`='2' WHERE ( id = 1 ) [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-04T22:18:22+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/downOrderid/id/1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0040s ]
+SQL: SELECT `orderid` FROM `db_infoclass` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `db_infoclass` SET `orderid`='1' WHERE ( id = 1 ) [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-04T22:18:26+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/downOrderid/id/1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0040s ]
+SQL: SELECT `orderid` FROM `db_infoclass` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-04T22:25:23+08:00 ] 127.0.0.1 /xkcms/index.php/Admin/Infoclass/upOrderid/id/1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `db_infoclass` [ RunTime:0.0050s ]
+SQL: SELECT `orderid` FROM `db_infoclass` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `db_infoclass` SET `orderid`='2' WHERE ( id = 1 ) [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
