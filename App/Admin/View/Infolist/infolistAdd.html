@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>添加文章信息</title>
+<link href="__PUBLIC__/style/admin.css" rel="stylesheet" type="text/css" />
+<link href="__ROOT__/Plugin/calendar/calendar-blue.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="__PUBLIC__/js/jquery.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/checkf.func.js"></script>
+<script type="text/javascript" src="__ROOT__/Plugin/calendar/calendar.js"></script>
+<script type="text/javascript" src="__ROOT__/Plugin/ueditor/ueditor.config.js"></script>
+<script type="text/javascript" src="__ROOT__/Plugin/ueditor/ueditor.all.min.js"></script>
+<script type="text/javascript" src="__ROOT__/Plugin/ueditor/lang/zh-cn/zh-cn.js"></script> 
+<script type="text/javascript" charset="utf-8">  
+    window.UEDITOR_HOME_URL = "__ROOT__/Plugin/ueditor/";  
+    $(document).ready(function () {  
+      UE.getEditor('content', { 
+      initialFrameHeight: 300,  
+      initialFrameWidth: 800,   
+      serverUrl: "__ROOT__/Plugin/ueditor/php/controller.php"
+    });  
+  });     
+</script>    
+</head>
+<body>
+<div class="formHeader"> <span class="title">添加文章信息</span> <a href="javascript:location.reload();" class="reload">刷新</a> </div>
+<form name="form" id="form" method="post" action="{:U('infolistAddSave')}" onsubmit="return cfm_infolm();" enctype="multipart/form-data">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="formTable">
+        <tr>
+            <td width="25%" height="40" align="right">栏　目：</td>
+            <td>
+                   <select name="classid" id="classid">
+                        <option value="-1">一级栏目</option>
+                        <foreach name="classList" item="v">
+                            <option value="{$v.id}">{$v.html}{$v.classname}</option>
+                        </foreach>
+                    </select>
+                <span class="maroon">*</span><span class="cnote">带<span class="maroon">*</span>号表示为必填项</span></td>
+                <td>&nbsp;</td>
+        </tr>
+                <tr>
+            <td height="40" align="right">标　题：</td>
+            <td><input type="text" name="title" id="title" class="input" value="" style="color:;font-weight:;" />
+               </td><td> <span class="maroon">*</span>
+               </td>
+        </tr>
+        <tr class="nb">
+           <td height="40" align="right">属　性：</td>
+           <td class="attrArea">
+            <foreach name="flag" item="v">
+                <span><input type="checkbox" name="flag[]" id="flag[]" value="{$v.flag}" />{$v.flagname}[{$v.flag}]</span>
+            </foreach>
+          <td>&nbsp;</td>
+            </td>
+       </tr> 
+        <tr class="nb">
+            <td colspan="3" height="26"><div class="line"> </div></td>
+        </tr>
+        <tr class="nb">
+            <td colspan="3" height="0" id="df"></td>
+        </tr>
+      <!--   <tr>
+          <td height="40" align="right">文章来源：</td>
+          <td><input type="text" name="source" id="source" class="input" value="{$articleInfo['source']}" />
+             </td>
+      </tr>
+      <tr>
+          <td height="40" align="right">作者编辑：</td>
+          <td><input type="text" name="author" id="author" class="input" value="admin" /></td>
+      </tr> -->
+        <tr>
+            <td height="40" align="right">缩略图片：</td>
+            <td><input name="picurl" type="file" id="picurl" class="input" value="" />
+                    </td>
+                <td><div id="img"></div></td>
+        </tr>
+     <!--    <tr>
+         <td height="40" align="right">跳转链接：</td>
+         <td><input type="text" name="linkurl" id="linkurl" class="input" value="{$articleInfo['linkurl']}" /></td>
+     </tr> -->
+        <tr>
+            <td height="40" align="right">关键词：</td>
+            <td><input type="text" name="keywords" id="keywords" class="input" value="" />
+                <span class="cnote">多关键词之间用空格或者“,”隔开</span></td>
+                <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td height="104" align="right">摘　要：</td>
+            <td><textarea name="description" id="description" class="textdesc"></textarea>
+                <div class="hr_5"></div>
+                最多能输入 <strong>255</strong> 个字符 </td>
+                <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td height="580" align="right">详细内容：</td>
+            <td><textarea name="content" id="content" class="kindeditor"></textarea>
+               
+               </td>
+               <td>&nbsp;</td>
+        </tr>
+      <!--   <tr class="nb">
+          <td height="124" align="right">组　图：</td>
+          <td><fieldset class="picarr">
+                  <legend>列表</legend>
+                  <div>最多可以上传<strong>50</strong>张图片<span onclick="GetUploadify('uploadify2','组图上传','image','image',50,2097152,'picarr','picarr_area')">开始上传</span></div>
+                  <ul id="picarr_area">
+                                          </ul>
+              </fieldset></td>
+      </tr> -->
+        <tr class="nb">
+            <td colspan="3" height="26"><div class="line"> </div></td>
+        </tr>
+        <tr>
+            <td height="40" align="right">点击次数：</td>
+            <td><input type="text" name="hits" id="hits" class="inputos" value="{$hits}" /></td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td height="40" align="right">排列排序：</td>
+            <td><input type="text" name="orderid" id="orderid" class="inputos" value="{$orderid}" /></td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td height="40" align="right">更新时间：</td>
+            <td><input name="posttime" type="text" id="posttime" class="inputms" value="<?php echo date('Y-m-d H:s:i'); ?>" readonly="readonly" />
+                <script type="text/javascript">
+                date = new Date();
+                Calendar.setup({
+                    inputField     :    "posttime",
+                    ifFormat       :    "%Y-%m-%d %H:%M:%S",
+                    showsTime      :    true,
+                    timeFormat     :    "24"
+                });
+                </script></td>
+                <td>&nbsp;</td>
+        </tr>
+        <tr class="nb">
+            <td height="40" align="right">审　核：</td>
+            <td><input type="radio" name="checkinfo" value="true" checked="checked" />
+                是 &nbsp;
+                <input type="radio" name="checkinfo" value="false" />
+                否<span class="cnote">选择“否”则该信息暂时不显示在前台</span></td>
+                <td>&nbsp;</td>
+        </tr>
+    </table>
+    <div class="formSubBtn">
+        <input type="submit" class="submit" value="提交" />
+        <input type="button" class="back" value="返回" onclick="history.go(-1);" />
+    </div>
+</form>
+</body>
+</html>

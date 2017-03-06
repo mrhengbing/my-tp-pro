@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>文章管理</title>
+<link href="__PUBLIC__/style/admin.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="__PUBLIC__/js/jquery.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/forms.func.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/listajax.js"></script>
+</head>
+<body>
+<div class="topToolbar"> <span class="title">文章管理</span> <a href="javascript:location.reload();" class="reload">刷新</a></div>
+<form name="form" id="form" method="post" action="">
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" class="dataTable">
+        <tr align="left" class="head">
+            <td width="5%" height="36" class="firstCol"><input type="checkbox" name="checkid" onclick="CheckAll(this.checked);" /></td>
+            <td width="3%">ID</td>
+            <td width="35%">文章标题</td>
+            <td width="10%">所属栏目</td>
+            <td width="15%">发布时间</td>
+            <td width="5%">点击次数</td>
+            <td width="10%" align="center">排序</td>
+            <td width="22%" class="endCol">操作</td>
+        </tr>
+        <foreach name="list" item="v">
+         <tr align="left">
+                <td height="36" class="firstCol">
+                    <input type="checkbox" name="checkid[]" id="checkid[]" value="{$v.id}" />
+                </td>
+                <td>{$v.id}</td>
+                <td>{$v.title}</td> 
+                <td><strong>{$v.classname}</strong></td>
+                <td class="number">{$v.posttime}</td>
+                <td>{$v.hits}</td>
+                <td align="center">           
+                     <input type="text" name="orderid" id="orderid_{$v.id}" class="inputls" value="{$v.orderid}" onblur="updateOrderid({:U('updateOrderid', '', '')},{$v.id})" />
+                </td>
+                <td class="action endCol">
+                    <span><a href="javascript:location.reload();" onclick="check({$v.id});" title="点击进行显示与隐藏操作">
+                    <if condition="$v['checkinfo'] eq 'true'">
+                    显示
+                    <else />
+                    隐藏
+                    </if>
+                    </a></span> | 
+                    <span><a href="{:U('infolistUpdate', array('id'=>$v['id']))}">修改</a></span> | 
+                    <span class="nb"><a href="{:U('delClass', array('id'=>$v['id']))}" onclick="return ConfDel(2);">删除</a></span>
+                </td>
+            </tr>
+            </foreach>
+    </table>
+</form>
+<div class="bottomToolbar"> 
+     <span class="selArea"><span>选择：</span> 
+    <a href="javascript:CheckAll(true);">全部</a> - 
+    <a href="javascript:CheckAll(false);">无</a> - 
+    <a href="javascript:SubUrlParam('{:U('delAllClass')}');" onclick="return ConfDelAll(0);">删除</a>　
+    <span>操作：</span><a href="javascript:location.reload();">排序</a> 
+  </span> 
+    <a href="{:U('infolistAdd')}" class="dataBtn">添加文章</a> 
+</div>
+<div class="page"> <div class="pageList">{$page}</div> </div>
+
+<script type="text/javascript">
+function check(id){
+    $.ajax({
+        url : "{:U('check', '', '')}/id/"+id,
+        type:'get'
+    });
+}
+</script>
+</body>
+</html>

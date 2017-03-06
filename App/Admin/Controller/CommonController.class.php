@@ -17,8 +17,7 @@ class CommonController extends Controller {
             $this->redirect('Login/Index');
         }
     }
-
-    
+     
     /**
      * 图片上传
      * @return [type] [description]

@@ -152,7 +152,7 @@ class InfoclassController extends CommonController {
                 'parentstr'     =>   $parentstr,
                 'infotype'      =>   I('infotype', '', 'intval'),
                 'classname'     =>   I('classname'),
-                //'content'       =>   I('content'),
+                'content'       =>   I('content'),
                 'seotitle'      =>   I('seotitle'),
                 'keywords'      =>   I('keywords'),
                 'description'   =>   I('description'),

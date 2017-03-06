@@ -23,6 +23,19 @@ function tabs(tabobj, obj)
     });
 }
 </script>
+<script type="text/javascript" src="__ROOT__/Plugin/ueditor/ueditor.config.js"></script>
+<script type="text/javascript" src="__ROOT__/Plugin/ueditor/ueditor.all.min.js"></script>
+<script type="text/javascript" src="__ROOT__/Plugin/ueditor/lang/zh-cn/zh-cn.js"></script> 
+<script type="text/javascript" charset="utf-8">  
+    window.UEDITOR_HOME_URL = "__ROOT__/Plugin/ueditor/";  
+    $(document).ready(function () {  
+      UE.getEditor('content', { 
+      initialFrameHeight: 300,  
+      initialFrameWidth: 800,   
+      serverUrl: "__ROOT__/Plugin/ueditor/php/controller.php"
+    });  
+  });     
+</script>    
 </head>
 <body>
 <div class="formHeader"> <span class="title">添加栏目</span> <a href="javascript:location.reload();" class="reload">刷新</a> </div>
@@ -87,9 +100,16 @@ function tabs(tabobj, obj)
     <table width="80%" border="0" cellspacing="0" cellpadding="0" class="formTable">
        
         <tr>
-            <td width="20%" height="118" align="right">详细内容：</td>
+            <td width="20%" height="100" align="right">摘    要：</td>
             <td><textarea name="description" id="description" class="textarea"></textarea></td>
             <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td height="500" align="right">详细内容：</td>
+            <td><textarea name="content" id="content" class=""></textarea>
+               
+               </td>
+               <td>&nbsp;</td>
         </tr>
     </table>
 </div>
