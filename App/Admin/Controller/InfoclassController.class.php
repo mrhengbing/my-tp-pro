@@ -61,36 +61,40 @@ class InfoclassController extends CommonController {
      * @return [type] [description]
      */
     public function infoclassAddSave(){
-        //接收所有参数
-        $data = $_POST;
+        if(IS_POST){
+            //接收所有参数
+            $data = I('post.');
+  
+            //查询所有栏目
+            $infoclass = M('infoclass')->order('orderid asc')->select();
 
-        //查询所有栏目
-        $infoclass = M('infoclass')->order('orderid asc')->select();
+            //查询当前类的父类的所有父类
+            $parentarr = \Infoclass::getParents($infoclass, $data['parentid']);
 
-        //查询当前类的父类的所有父类
-        $parentarr = \Infoclass::getParents($infoclass, $data['parentid']);
+            $parentstr = '';
+            //将父类的所有父类id拼成字符串
+            foreach($parentarr as $v){
+                $parentstr .= $v['parentid'].',';
+            }
+            $parentstr .= $data['parentid'];      //补充连接当前类的父类id
 
-        $parentstr = '';
-        //将父类的所有父类id拼成字符串
-        foreach($parentarr as $v){
-            $parentstr .= $v['parentid'].',';
-        }
-        $parentstr .= $data['parentid'];      //补充连接当前类的父类id
+            $data['parentstr'] = $parentstr;        //将父类id字符串赋给数组$data
 
-        $data['parentstr'] = $parentstr;        //将父类id字符串赋给数组$data
+            //获取图片路径
+            if(isset($_FILES['picurl']['name']) && $_FILES['picurl']['name']!=''){
+                $picurl = self::uploadify();
+                $data['picurl'] = $picurl;
+            }
 
-        //获取图片路径
-        if(isset($_FILES['picurl']['name']) && $_FILES['picurl']['name']!=''){
-            $picurl = self::uploadify();
-            $data['picurl'] = $picurl;
-        }
+            $result = M('infoclass')->add($data);      //将所有数据添加进数据库
 
-        $result = M('infoclass')->add($data);      //将所有数据添加进数据库
-
-        if($result){
-            $this->success('添加成功！', U('index'));
+            if($result){
+                $this->success('添加成功！', U('index'));
+            }else{
+                $this->error('添加失败！');
+            }
         }else{
-            $this->error('添加失败！');
+            $this->redirect('index');
         }
     }
 
@@ -128,60 +132,62 @@ class InfoclassController extends CommonController {
      * @return [type] [description]
      */
     public function infoclassUpdateSave(){
-        $id         = I('id', '', 'intval');            //栏目id
-        $parentid   = I('parentid', '', 'intval');        //选择父栏目的id
-        $repid      = I('repid', '', 'intval');         //栏目原父id
+        if(IS_POST){
+            $id         = I('id', '', 'intval');            //栏目id
+            $parentid   = I('parentid', '', 'intval');        //选择父栏目的id
+            $repid      = I('repid', '', 'intval');         //栏目原父id
 
-        $infoclass = M('infoclass');   //实例化infoclass
-        //查询所有栏目
-        $infolist = $infoclass->order('orderid asc')->select();
+            $infoclass = M('infoclass');   //实例化infoclass
+            //查询所有栏目
+            $infolist = $infoclass->order('orderid asc')->select();
 
-         //查询当前类的所有父类
-        $parentarr = \Infoclass::getParents($infolist, $id);
+             //查询当前类的所有父类
+            $parentarr = \Infoclass::getParents($infolist, $id);
 
-        $parentstr = '';
-        //将栏目的所有父类id拼成字符串
-        foreach($parentarr as $v){
-            $parentstr .= $v['parentid'].',';
-        }
-
-        $data = array();    //定义变量$data为数组
-        $data = array(
-                'id'            =>   $id,
-                'parentid'      =>   $parentid,
-                'parentstr'     =>   $parentstr,
-                'infotype'      =>   I('infotype', '', 'intval'),
-                'classname'     =>   I('classname'),
-                'content'       =>   I('content'),
-                'seotitle'      =>   I('seotitle'),
-                'keywords'      =>   I('keywords'),
-                'description'   =>   I('description'),
-                'orderid'       =>   I('orderid', '', 'intval'),
-                'checkinfo'     =>   I('checkinfo')
-            );
-
-        //不允许更新parentid为自己的
-        if($parentid != $id){
-            //更新所有关联parentstr
-            /*if($parentid != $repid){
-                $childtbname = array('infolist','infoimg');     //和parentstr关联的表
-                //更新本类parentstr
-                foreach($childtbname as $k=>$v)
-                {
-                    M($v)->where('classid = '.$id)->save(array('parentid'=>$parentid, 'parentstr'=>$parentstr));
-                }
-            }*/
-            //获取图片路径
-            if(isset($_FILES['picurl']['name']) && $_FILES['picurl']['name']!=''){
-                $picurl = self::uploadify();
-                $data['picurl'] = $picurl;
+            $parentstr = '';
+            //将栏目的所有父类id拼成字符串
+            foreach($parentarr as $v){
+                $parentstr .= $v['parentid'].',';
             }
-            //更新数据
-            $infoclass->save($data);
-            $this->success('修改成功！', U('index'));
-            
-        }else{
-            $this->error('不允许选择本身作为所属父类！');
+
+            $data = array();    //定义变量$data为数组
+            $data = array(
+                    'id'            =>   $id,
+                    'parentid'      =>   $parentid,
+                    'parentstr'     =>   $parentstr,
+                    'infotype'      =>   I('infotype', '', 'intval'),
+                    'classname'     =>   I('classname'),
+                    'content'       =>   I('content'),
+                    'seotitle'      =>   I('seotitle'),
+                    'keywords'      =>   I('keywords'),
+                    'description'   =>   I('description'),
+                    'orderid'       =>   I('orderid', '', 'intval'),
+                    'checkinfo'     =>   I('checkinfo')
+                );
+
+            //不允许更新parentid为自己的
+            if($parentid != $id){
+                //更新所有关联parentstr
+                /*if($parentid != $repid){
+                    $childtbname = array('infolist','infoimg');     //和parentstr关联的表
+                    //更新本类parentstr
+                    foreach($childtbname as $k=>$v)
+                    {
+                        M($v)->where('classid = '.$id)->save(array('parentid'=>$parentid, 'parentstr'=>$parentstr));
+                    }
+                }*/
+                //获取图片路径
+                if(isset($_FILES['picurl']['name']) && $_FILES['picurl']['name']!=''){
+                    $picurl = self::uploadify();
+                    $data['picurl'] = $picurl;
+                }
+                //更新数据
+                $infoclass->save($data);
+                $this->success('修改成功！', U('index'));
+                
+            }else{
+                $this->error('不允许选择本身作为所属父类！');
+            }
         }
     }
 

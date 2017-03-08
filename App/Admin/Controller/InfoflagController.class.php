@@ -3,8 +3,8 @@
  * @Author: mrhengbing
  * @Create time:   2017-03-04 15:23:30
  * @Email:  415671062@qq.com
- * @Last Modified by:   mrhengbing
- * @Last Modified time: 2017-03-04 16:44:41
+ * @Last Modified by:   anchen
+ * @Last Modified time: 2017-03-08 15:43:59
  */
 namespace Admin\Controller;
 use Think\Controller;
@@ -36,32 +36,36 @@ class InfoflagController extends CommonController{
      * @return [type] [description]
      */
     public function flagUpdate(){
-        $id             =   I('id');
-        $flag           =   I('flag');
-        $flagname       =   I('flagname');
-        $orderid        =   I('orderid');
+        if(IS_POST){
+            $id             =   I('id');
+            $flag           =   I('flag');
+            $flagname       =   I('flagname');
+            $orderid        =   I('orderid');
 
-        $flagnameadd    =   I('flagnameadd');
-        $flagadd        =   I('flagadd');
-        $orderidadd     =   I('orderidadd', '', 'intval');
+            $flagnameadd    =   I('flagnameadd');
+            $flagadd        =   I('flagadd');
+            $orderidadd     =   I('orderidadd', '', 'intval');
 
-        $dataAdd = array();
-        /*判断有新属性，则添加进数据库*/
-        if($flagnameadd != '' && $flagadd != ''){
-            $dataAdd = array(
-                'flag'      =>  $flagadd,
-                'flagname'  =>  $flagnameadd,
-                'orderid'   =>  $orderidadd
-            );
-            M('infoflag')->add($dataAdd);
-        }
+            $dataAdd = array();
+            /*判断有新属性，则添加进数据库*/
+            if($flagnameadd != '' && $flagadd != ''){
+                $dataAdd = array(
+                    'flag'      =>  $flagadd,
+                    'flagname'  =>  $flagnameadd,
+                    'orderid'   =>  $orderidadd
+                );
+                M('infoflag')->add($dataAdd);
+            }
 
-        $ids = count($id);  
-        
-        for($i = 0; $i < $ids; $i++){
-           M('infoflag')->where('id='.$id[$i])->setfield(array('flag'=>$flag[$i], 'flagname'=>$flagname[$i], 'orderid'=>$orderid[$i]));
-        }
-        $this->success('更新完成！', U('index'));  
+            $ids = count($id);  
+            
+            for($i = 0; $i < $ids; $i++){
+               M('infoflag')->where('id='.$id[$i])->setfield(array('flag'=>$flag[$i], 'flagname'=>$flagname[$i], 'orderid'=>$orderid[$i]));
+            }
+            $this->success('更新完成！', U('index'));
+        }else{
+            $this->redirect('index');
+        }  
     }
 
     /**

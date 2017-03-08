@@ -89,41 +89,45 @@ class InfolistController extends CommonController{
      * @return [type] [description]
      */
     public function infolistAddSave(){
-        //接收所有参数
-        $data = $_POST;
+        if(IS_POST){
+            //接收所有参数
+            $data = I('post.');
 
-        $classid = I('classid', '', 'intval');      //所属栏目id
+            $classid = I('classid', '', 'intval');      //所属栏目id
 
-        //查询所属栏目父id
-        $infoclass = M('infoclass')->field('parentid')->where('id='.$classid)->find();
+            //查询所属栏目父id
+            $infoclass = M('infoclass')->field('parentid')->where('id='.$classid)->find();
 
-        //将所属栏目的父id插入$data中
-        $data['parentid'] = $infoclass['parentid'];
+            //将所属栏目的父id插入$data中
+            $data['parentid'] = $infoclass['parentid'];
 
-        //文章属性
-        $flag = I('flag');  
-        if(is_array($flag))
-        {
-            $flag = implode(',', $flag);
-        }
+            //文章属性
+            $flag = I('flag');  
+            if(is_array($flag))
+            {
+                $flag = implode(',', $flag);
+            }
 
-        $data['flag'] = $flag;
+            $data['flag'] = $flag;
 
-        //获取图片路径
-        if(isset($_FILES['picurl']['name']) && $_FILES['picurl']['name']!=''){
-            $picurl = self::uploadify();
-            $data['picurl'] = $picurl;
-        }
+            //获取图片路径
+            if(isset($_FILES['picurl']['name']) && $_FILES['picurl']['name']!=''){
+                $picurl = self::uploadify();
+                $data['picurl'] = $picurl;
+            }
 
-        //将时间转化为时间戳
-        $data['posttime'] = strtotime($_POST['posttime']);
+            //将时间转化为时间戳
+            $data['posttime'] = strtotime($_POST['posttime']);
 
-        $result = M('infolist')->add($data);      //将所有数据添加进数据库
+            $result = M('infolist')->add($data);      //将所有数据添加进数据库
 
-        if($result){
-            $this->success('添加成功！', U('index'));
+            if($result){
+                $this->success('添加成功！', U('index'));
+            }else{
+                $this->error('添加失败！');
+            }
         }else{
-            $this->error('添加失败！');
+            $this->redirect('index');
         }
     } 
 
@@ -171,47 +175,51 @@ class InfolistController extends CommonController{
      * @return [type] [description]
      */
     public function infolistUpdateSave(){
-        $id             = I('id', '', 'intval');            //文章id
-        $classid        = I('classid', '', 'intval');      //所属栏目id
+        if(IS_POST){
+            $id             = I('id', '', 'intval');            //文章id
+            $classid        = I('classid', '', 'intval');      //所属栏目id
 
-        //查询所属栏目父id
-        $infoclass = M('infoclass')->field('parentid')->where('id='.$classid)->find();
+            //查询所属栏目父id
+            $infoclass = M('infoclass')->field('parentid')->where('id='.$classid)->find();
 
-        //文章属性
-        $flag = I('flag');  
-        if(is_array($flag))
-        {
-            $flag = implode(',', $flag);
-        }
+            //文章属性
+            $flag = I('flag');  
+            if(is_array($flag))
+            {
+                $flag = implode(',', $flag);
+            }
 
-        $data = array();    //变量$data为数组
-        $data = array(
-                'id'            =>   $id,
-                'classid'       =>   $classid,
-                'parentid'      =>   $infoclass['parentid'],
-                'title'         =>   I('title'),
-                'flag'          =>   $flag,
-                'keywords'      =>   I('keywords'),
-                'description'   =>   I('description'),
-                'content'       =>   I('content'),
-                'hits'          =>   I('hits', '', 'intval'),
-                'posttime'      =>   I('posttime'),
-                'orderid'       =>   I('orderid', '', 'intval'),
-                'checkinfo'     =>   I('checkinfo')
-            );
+            $data = array();    //变量$data为数组
+            $data = array(
+                    'id'            =>   $id,
+                    'classid'       =>   $classid,
+                    'parentid'      =>   $infoclass['parentid'],
+                    'title'         =>   I('title'),
+                    'flag'          =>   $flag,
+                    'keywords'      =>   I('keywords'),
+                    'description'   =>   I('description'),
+                    'content'       =>   I('content'),
+                    'hits'          =>   I('hits', '', 'intval'),
+                    'posttime'      =>   I('posttime'),
+                    'orderid'       =>   I('orderid', '', 'intval'),
+                    'checkinfo'     =>   I('checkinfo')
+                );
 
-        //获取图片路径
-        if(isset($_FILES['picurl']['name']) && $_FILES['picurl']['name']!=''){
-            $picurl = self::uploadify();
-            $data['picurl'] = $picurl;
-        }
+            //获取图片路径
+            if(isset($_FILES['picurl']['name']) && $_FILES['picurl']['name']!=''){
+                $picurl = self::uploadify();
+                $data['picurl'] = $picurl;
+            }
 
-        //将时间转化为时间戳
-        $data['posttime'] = strtotime($data['posttime']);
+            //将时间转化为时间戳
+            $data['posttime'] = strtotime($data['posttime']);
 
-        //更新数据库
-        M('infolist')->save($data);
-        $this->success('修改成功！', U('index'));                 
+            //更新数据库
+            M('infolist')->save($data);
+            $this->success('修改成功！', U('index'));
+        }else{
+            $this->redirect('index');
+        }                 
     }
 
     /**

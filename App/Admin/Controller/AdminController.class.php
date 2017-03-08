@@ -49,44 +49,48 @@ class AdminController extends CommonController {
      * @return [type] [description]
      */
     public function adminAddSave(){
-        $username   = I('username');     //用户名
-        $password   = I('password');      //密码
-        $levelname  = I('levelname');      //管理组id
-
-        //只有超级管理员才有权创建超级管理员
-        if(session('adminlevel') > 1 and $levelname == 1)
-        {
-            $this->error('非法的操作，不能创建超级管理员！');
-        }
-
-        //判断用户名是否合法
-        if(preg_match("/[^0-9a-zA-Z_@!\.-]/",$username) ||
-           preg_match("/[^0-9a-zA-Z_@!\.-]/",$password))
-        {
-            $this->error('用户名或密码非法！请使用[0-9a-zA-Z_@!.-]内的字符！');
-        }
-
-        //判断用户名是否存在
-        $user = M('admin')->where('username="'.$username.'"')->find();
-        if($user){
-            $this->error('用户名已存在！');
-        }
-
-        $password = md5(md5($password));  
-        $data = array(
-                'username'      => $username,    //用户名
-                'password'      => $password,    //密码
-                'nickname'      => I('nickname'), //昵称
-                'levelname'     => $levelname,      //管理组id
-                'loginip'       => '127.0.0.1',
-                'logintime'     => time()
-            );
-
-        if(M('admin')->add($data)){        //添加管理员
-            $this->success('添加成功', U('index'));
+        if(IS_POST){
+            $username   = I('username');     //用户名
+            $password   = I('password');      //密码
+            $levelname  = I('levelname');      //管理组id
+            
+            //只有超级管理员才有权创建超级管理员
+            if(session('adminlevel') > 1 and $levelname == 1)
+            {
+                $this->error('非法的操作，不能创建超级管理员！');
+            }
+    
+            //判断用户名是否合法
+            if(preg_match("/[^0-9a-zA-Z_@!\.-]/",$username) ||
+               preg_match("/[^0-9a-zA-Z_@!\.-]/",$password))
+            {
+                $this->error('用户名或密码非法！请使用[0-9a-zA-Z_@!.-]内的字符！');
+            }
+    
+            //判断用户名是否存在
+            $user = M('admin')->where('username="'.$username.'"')->find();
+            if($user){
+                $this->error('用户名已存在！');
+            }
+    
+            $password = md5(md5($password));  
+            $data = array(
+                    'username'      => $username,    //用户名
+                    'password'      => $password,    //密码
+                    'nickname'      => I('nickname'), //昵称
+                    'levelname'     => $levelname,      //管理组id
+                    'loginip'       => '127.0.0.1',
+                    'logintime'     => time()
+                );
+    
+            if(M('admin')->add($data)){        //添加管理员
+                $this->success('添加成功', U('index'));
+            }else{
+                $this->error('添加失败');
+            }        
         }else{
-            $this->error('添加失败');
-        }        
+            $this->redirect('index');
+        }
 
     }
 
@@ -114,58 +118,62 @@ class AdminController extends CommonController {
      * @return [type] [description]
      */
     public function adminUpdateSave(){
-        $id         = I('id', '', 'intval');   //管理员id
-        $username   = I('username');          //用户名
-        $password   = I('password');          //新密码
-        $levelname  = I('levelname');       //管理组id
+        if(IS_POST){
+            $id         = I('id', '', 'intval');   //管理员id
+            $username   = I('username');          //用户名
+            $password   = I('password');          //新密码
+            $levelname  = I('levelname');       //管理组id
 
-        //初始账号不允许更改状态
-        if($id == 1 and $levelname != '1')
-        {
-            $this->error('抱歉，不能更改初始账号状态！');
-        }
-
-        //只有超级管理员才有权创建超级管理员
-        if(session('adminlevel') > 1 and $levelname == 1)
-        {
-            $this->error('非法的操作，您不是超级管理员，不能创建超级管理员！');
-        }
-
-        $admin = M('admin');    //实例化admin对象
-        //判断用户名是否存在       
-        $user = $admin->where('username="'.$username.'" and id<>'.$id)->find();
-        if($user){
-            $this->error('用户名已存在！');
-        }
-
-        //管理员信息
-        $data=array();
-        $data = array(
-                'id'            => $id,         //管理员id
-                'username'      => $username,    //用户名
-                'nickname'      => I('nickname'), //昵称
-                'levelname'     => I('levelname'), //管理组id
-            );
-
-        //判断密码为空时不更新密码
-        if ($password == '') {
-            $admin->save($data);      //更新数据
-            $this->success('修改成功！', U('index'));
-        }else{
-            $oldpwd     = I('oldpwd');          //接收旧密码
-            $oldpwd     = md5(md5($oldpwd));    //密码两次md5加密
-            $password   = md5(md5($password));
-            //查询密码
-            $r = $admin->field('password')->where('id='.$id)->find();
-            //判断旧密码
-            if($r['password'] != $oldpwd)
+            //初始账号不允许更改状态
+            if($id == 1 and $levelname != '1')
             {
-                $this->error('抱歉，旧密码错误！');
+                $this->error('抱歉，不能更改初始账号状态！');
             }
-            
-            $data['password'] = $password;     //将新密码放进数组$data
-            $admin->save($data);     //更新数据
-            $this->success('修改成功！', U('index'));
+
+            //只有超级管理员才有权创建超级管理员
+            if(session('adminlevel') > 1 and $levelname == 1)
+            {
+                $this->error('非法的操作，您不是超级管理员，不能创建超级管理员！');
+            }
+
+            $admin = M('admin');    //实例化admin对象
+            //判断用户名是否存在       
+            $user = $admin->where('username="'.$username.'" and id<>'.$id)->find();
+            if($user){
+                $this->error('用户名已存在！');
+            }
+
+            //管理员信息
+            $data=array();
+            $data = array(
+                    'id'            => $id,         //管理员id
+                    'username'      => $username,    //用户名
+                    'nickname'      => I('nickname'), //昵称
+                    'levelname'     => I('levelname'), //管理组id
+                );
+
+            //判断密码为空时不更新密码
+            if ($password == '') {
+                $admin->save($data);      //更新数据
+                $this->success('修改成功！', U('index'));
+            }else{
+                $oldpwd     = I('oldpwd');          //接收旧密码
+                $oldpwd     = md5(md5($oldpwd));    //密码两次md5加密
+                $password   = md5(md5($password));
+                //查询密码
+                $r = $admin->field('password')->where('id='.$id)->find();
+                //判断旧密码
+                if($r['password'] != $oldpwd)
+                {
+                    $this->error('抱歉，旧密码错误！');
+                }
+                
+                $data['password'] = $password;     //将新密码放进数组$data
+                $admin->save($data);     //更新数据
+                $this->success('修改成功！', U('index'));
+            }
+        }else{
+            $this->redirect('index');
         }     
     }
 
