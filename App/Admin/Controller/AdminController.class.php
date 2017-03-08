@@ -89,7 +89,7 @@ class AdminController extends CommonController {
                 $this->error('添加失败');
             }        
         }else{
-            $this->redirect('index');
+            $this->error('页面不存在！');
         }
 
     }
@@ -173,7 +173,7 @@ class AdminController extends CommonController {
                 $this->success('修改成功！', U('index'));
             }
         }else{
-            $this->redirect('index');
+            $this->error('页面不存在！');
         }     
     }
 

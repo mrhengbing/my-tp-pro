@@ -94,7 +94,7 @@ class InfoclassController extends CommonController {
                 $this->error('添加失败！');
             }
         }else{
-            $this->redirect('index');
+            $this->error('页面不存在！');
         }
     }
 
@@ -188,6 +188,8 @@ class InfoclassController extends CommonController {
             }else{
                 $this->error('不允许选择本身作为所属父类！');
             }
+        }else{
+            $this->error('页面不存在！');
         }
     }
 

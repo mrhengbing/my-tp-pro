@@ -4,7 +4,7 @@
  * @Create time:   2017-03-04 15:23:30
  * @Email:  415671062@qq.com
  * @Last Modified by:   anchen
- * @Last Modified time: 2017-03-08 15:43:59
+ * @Last Modified time: 2017-03-08 15:51:37
  */
 namespace Admin\Controller;
 use Think\Controller;
@@ -64,7 +64,7 @@ class InfoflagController extends CommonController{
             }
             $this->success('更新完成！', U('index'));
         }else{
-            $this->redirect('index');
+            $this->error('页面不存在！');
         }  
     }
 
