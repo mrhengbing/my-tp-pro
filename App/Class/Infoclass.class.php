@@ -1,13 +1,12 @@
 <?php
 /**
  * @Author: mrhengbing
- * @Email:  415671062@qq.com
- * @Date:   2016-04-26 22:54:02
+ * @Date:   2017-02-10 22:54:02
  * @Last Modified by:   mrhengbing
- * @Last Modified time: 2016-04-29 21:22:28
- * ---------------栏目类---无限极分类---------
+ * @Last Modified time: 2017-03-09 14:27:51
+ * @Email:  415671062@qq.com
+ * ---------------栏目无限极分类---------
  */
-
 class Infoclass {
     /**
      * 无限极分类1

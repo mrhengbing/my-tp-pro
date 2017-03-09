@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>权限模块管理</title>
+<link href="__PUBLIC__/style/admin.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="__PUBLIC__/js/jquery.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/forms.func.js"></script>
+</head>
+<body>
+<div class="topToolbar"> <span class="title">权限模块列表</span> <a href="javascript:location.reload();" class="reload">刷新</a></div>
+<table width="100%" border="0" cellpadding="0" cellspacing="0" class="dataTable">
+    <tr align="left" class="head">
+        <td width="5%" height="36" class="firstCol">ID</td>
+        <td width="30%">模块名</td>
+        <td width="30%">模块说明</td>    
+        <td width="25%" class="endCol">操作</td>
+    <foreach name="list" item="v">
+        </tr>
+            <tr align="left" class="dataTr">
+            <td height="36" class="firstCol">{$v.id}</td>
+            <td>{$v.model}</td>
+            <td>{$v.description}</td>  
+            <td class="action endCol">
+                <span><a href="{:U('authlistUpdate', array('id'=>$v['id']))}">修改</a></span> | 
+                <span class="nb"><a href="{:U('authlistDel', array('id'=>$v['id']))}" onclick="return ConfDel(0);">删除</a></span></td>
+        </tr>
+    </foreach>
+    </table>
+<div class="bottomToolbar"> <a href="{:U('authlistAdd')}" class="dataBtn">添加模块</a> </div>
+<div class="page"> <div class="pageList">{$page}</div> </div>
+</body>
+</html>

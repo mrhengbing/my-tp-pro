@@ -1,8 +1,11 @@
 <?php
 /**
  * @Author: mrhengbing
+ * @Create time:   2017-02-09 21:16:13
+ * @Last Modified by:   mrhengbing
+ * @Last Modified time: 2017-03-09 14:29:05
  * @Email:  415671062@qq.com
- * --------------后台首页控制器----------------
+ * @---------后台首页控制器------------
  */
 
 namespace Admin\Controller;
@@ -13,25 +16,22 @@ class IndexController extends CommonController {
      * @return [type] [description]
      */
     public function index(){
-        //获取session
-        $admin = session();
-
-        //查找管理员表
-        $value = M('admin')->where('id='.$admin['uid'])->find();
+        //当前登陆管理员信息
+        $adminInfo = $this->adminInfo();
 
         //判断昵称是否为空，如果为空则使用昵称，否则使用用户名
-        if(!empty($value['nickname'])){
-            $adminname = $value['nickname'];
+        if(!empty($adminInfo['nickname'])){
+            $adminname = $adminInfo['nickname'];
         }else{
-            $adminname = $admin['username'];
+            $adminname = $adminInfo['username'];
         }
         //本次登录时间
-        $logintime = date('Y-m-d H:i:s', $value['logintime']);
+        $logintime = date('Y-m-d H:i:s', $adminInfo['logintime']);
         
-        S('admin', $admin, 10);
+        S('admin', $adminInfo, 10);
 
         //模板赋值
-        $this->admin = $admin;
+        $this->admin = $adminInfo;
         $this->adminname = $adminname;
         $this->logintime = $logintime;
 

@@ -1,8 +1,11 @@
 <?php
 /**
  * @Author: mrhengbing
+ * @Create time:   2017-02-09 8:35:10
+ * @Last Modified by:   mrhengbing
+ * @Last Modified time: 2017-03-09 14:22:34
  * @Email:  415671062@qq.com
- * --------------后台登陆控制器----------------
+ * @----------后台登陆模块控制器-------------
  */
 
 namespace Admin\Controller;

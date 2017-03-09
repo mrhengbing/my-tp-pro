@@ -1,10 +1,11 @@
 <?php
 /**
  * @Author: mrhengbing
- * @Create time:   2017-03-04 15:23:30
+ * @Create time:   2017-02-15 21:12:13
+ * @Last Modified by:   mrhengbing
+ * @Last Modified time: 2017-03-09 14:21:15
  * @Email:  415671062@qq.com
- * @Last Modified by:   anchen
- * @Last Modified time: 2017-03-08 15:51:37
+ * @----------文章属性模块控制器-------------
  */
 namespace Admin\Controller;
 use Think\Controller;

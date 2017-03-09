@@ -1,13 +1,23 @@
 <?php
 /**
  * @Author: mrhengbing
+ * @Create time:   2017-02-10 9:12:13
+ * @Last Modified by:   mrhengbing
+ * @Last Modified time: 2017-03-09 14:20:17
  * @Email:  415671062@qq.com
- * --------------栏目控制器-------------------
+ * @----------栏目模块控制器-------------
  */
 namespace Admin\Controller;
 use Think\Controller;
 import('Class.Infoclass');
 class InfoclassController extends CommonController {
+    /**
+     * 权限验证
+     */
+    function _initialize(){
+        $this->isModelAuth('infoclass');
+    }
+    
     /**
      * 栏目分类列表
      * @return [type] [description]

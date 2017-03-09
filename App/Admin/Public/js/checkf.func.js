@@ -11,8 +11,7 @@ $(function(){}).keydown(function(event){
 
 
 //验证管理员添加
-function cfm_admin()
-{
+function cfm_admin(){
 	if($("#username").val() == "")
 	{
 		alert("请输入用户名！");
@@ -53,8 +52,7 @@ function cfm_admin()
 
 
 //验证管理员修改
-function cfm_upadmin()
-{
+function cfm_upadmin(){
 	if($("#oldpwd").val()!="" || $("#password").val()!="" || $("#repassword").val()!="")
 	{
 		if($("#oldpwd").val() == "")
@@ -109,8 +107,7 @@ function cfm_upadmin()
 
 
 //验证管理组添加
-function cfm_admingroup()
-{
+function cfm_admingroup(){
 	if($("#groupname").val() == "")
 	{
 		alert("请输入管理组名称！");
@@ -119,52 +116,27 @@ function cfm_admingroup()
 	}
 }
 
-
-//验证站点添加
-function cfm_site()
-{
-	if($("#site_name").val() == "")
-	{
-		alert("请输入站点名称！");
-		$("#site_name").focus();
+function cfm_authlist(){
+	if($("#model").val() == ""){
+		alert("请填写模块名！");
+		$("#model").focus();
 		return false;
 	}
-	if($("#site_key").val() == "")
-	{
-		alert("请输入站点标识！");
-		$("#site_key").focus();
+	var ckupmodel = /^[a-zA-Z]+$/;
+	if(!ckupmodel.test($("#model").val())){
+		alert("请使用英文字母！");
+		$("#model").focus();
 		return false;
 	}
-	if($("#webname").val() == "")
-	{
-		alert("请输入站点标题！");
-		$("#webname").focus();
-		return false;
-	}
-	if($("#weburl").val() == "")
-	{
-		alert("请输入站点地址！");
-		$("#weburl").focus();
+	if($("#description").val() == ""){
+		alert("请填写模块说明！");
+		$("#description").focus();
 		return false;
 	}
 }
-
 
 //验证栏目管理
-function cfm_infoclass()
-{
-	if($("#classname").val() == "")
-	{
-		alert("请填写栏目名称！");
-		$("#classname").focus();
-		return false;
-	}
-}
-
-
-//验证类别通用
-function cfm_btype()
-{
+function cfm_infoclass(){
 	if($("#classname").val() == "")
 	{
 		alert("请填写栏目名称！");
@@ -175,8 +147,7 @@ function cfm_btype()
 
 
 //验证列表信息用
-function cfm_infolm()
-{
+function cfm_infolm(){
 	if($("#classid").val() == "-1")
 	{
 		alert("请选择所属栏目！");
@@ -193,8 +164,7 @@ function cfm_infolm()
 
 
 //验证广告位
-function cfm_adtype()
-{
+function cfm_adtype(){
 	if($("#classname").val() == "")
 	{
 		alert("请填写广告位名称！");
@@ -217,8 +187,7 @@ function cfm_adtype()
 
 
 //验证广告
-function cfm_admanager()
-{
+function cfm_admanager(){
 	if($("#title").val() == "")
 	{
 		alert("请填写广告标识！");
@@ -235,8 +204,7 @@ function cfm_admanager()
 
 
 //验证友情链接
-function cfm_weblink()
-{
+function cfm_weblink(){
 	if($("#classid").val() == "-1")
 	{
 		alert("请选择链接类型！");
@@ -259,8 +227,7 @@ function cfm_weblink()
 
 
 //验证留言
-function cfm_msg()
-{
+function cfm_msg(){
 	if($("#nickname").val() == "")
 	{
 		alert("请填写昵称！");
@@ -271,8 +238,7 @@ function cfm_msg()
 
 
 //验证会员
-function cfm_member()
-{
+function cfm_member(){
 	var ckuname = /^[0-9a-zA-Z_@\.-]+$/;
 	if($("#username").val() == "")
 	{
@@ -343,8 +309,7 @@ function cfm_member()
 
 
 //验证会员修改
-function cfm_upmember()
-{
+function cfm_upmember(){
 	if($("#password").val() != "")
 	{
 		var ckupwd = /^[0-9a-zA-Z_-]+$/;
@@ -414,8 +379,7 @@ function cfm_upmember()
 
 
 //验证商品添加
-function cfm_goods()
-{
+function cfm_goods(){
 	if($("#classid").val() == "-1")
 	{
 		alert("请选择所属类别！");
@@ -450,8 +414,7 @@ function cfm_goods()
 
 
 //验证评论
-function cfm_review()
-{
+function cfm_review(){
 	if($("#goodsid").val() == "-1")
 	{
 		alert("请选择商品名称！");
@@ -473,27 +436,8 @@ function cfm_review()
 }
 
 
-//验证配送区域
-function cfm_postarea()
-{
-	if($("#classname").val() == "")
-	{
-		alert("请填写配送区域名称！");
-		$("#classname").focus();
-		return false;
-	}
-	if($("#freight").val() == "")
-	{
-		alert("请填写配送区域价格！");
-		$("#freight").focus();
-		return false;
-	}
-}
-
-
 //验证自定义菜单
-function cfm_diymenu()
-{
+function cfm_diymenu(){
 	if($("#classname").val() == "")
 	{
 		alert("请填写菜单名称！");
@@ -504,8 +448,7 @@ function cfm_diymenu()
 
 
 //自定义模型
-function cfm_diymodel()
-{
+function cfm_diymodel(){
 	if($("#modelname").val() == "")
 	{
 		alert("请填写模型标识！");
@@ -528,8 +471,7 @@ function cfm_diymodel()
 
 
 //投票选项
-function cfm_vote()
-{
+function cfm_vote(){
 	if($("#title").val() == "")
 	{
 		alert("请填写投票标题！");
@@ -540,8 +482,7 @@ function cfm_vote()
 
 
 //导航菜单
-function cfm_nav()
-{
+function cfm_nav(){
 	if($("#classname").val() == "")
 	{
 		alert("请填写导航名称！");
@@ -558,8 +499,7 @@ function cfm_nav()
 
 
 //自定义字段验证
-function cfm_diyfield()
-{
+function cfm_diyfield(){
 	if($("#fieldname").val() == "")
 	{
 		alert("请填写字段名称！");
@@ -585,33 +525,8 @@ function cfm_diyfield()
 }
 
 
-//自定义模型数据添加
-function cfm_modeldata()
-{
-	if($("#classid").val() == "-1")
-	{
-		alert("请选择所属栏目！");
-		$("#classid").focus();
-		return false;
-	}
-}
-
-
-//碎片数据
-function cfm_fragment()
-{
-	if($("#title").val() == "")
-	{
-		alert("请填写碎片数据标识！");
-		$("#title").focus();
-		return false;
-	}
-}
-
-
 //管理组权限选择
-function SelPriv(siteid, obj)
-{
+function SelPriv(siteid, obj){
 	if (obj) {
 		$("input[type='checkbox'][name^='siteid["+siteid+"]']").attr('checked', 'checked');
 		$("input[type='checkbox'][name^='priv["+siteid+"]']").attr('checked', 'checked');
@@ -621,8 +536,7 @@ function SelPriv(siteid, obj)
 	}
 }
 
-function SelRole(siteid, name, obj)
-{
+function SelRole(siteid, name, obj){
 	if (obj.checked) {
 		$("input[type='checkbox'][name='priv["+siteid+"]["+name+"][]']").attr('checked', 'checked');
 	} else {
@@ -631,8 +545,7 @@ function SelRole(siteid, name, obj)
 }
 
 
-function SelModel(obj)
-{
+function SelModel(obj){
 	if (obj) {
 		$("input[type='checkbox'][name='model[]']").attr('checked', 'checked');
 	} else {

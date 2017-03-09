@@ -1,10 +1,10 @@
 <?php
 /**
  * @Author: mrhengbing
- * @Email:  415671062@qq.com
- * @Date:   2016-04-21 23:44:17
+ * @Date:   2017-02-21 23:44:17
  * @Last Modified by:   mrhengbing
- * @Last Modified time: 2017-03-01 13:50:52
+ * @Last Modified time: 2017-03-09 14:27:36
+ * @Email:  415671062@qq.com
  * ------------APP接口返回数据方式的封装类 ------------
  */
 
@@ -74,7 +74,7 @@ class Api{
         );
         
         echo json_encode($result);
-        exit();
+        exit;
     }
     
     /**

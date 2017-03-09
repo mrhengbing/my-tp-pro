@@ -3,14 +3,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>添加管理组</title>
+<title>修改管理组</title>
 <link href="__PUBLIC__/style/admin.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="__PUBLIC__/js/jquery.min.js"></script>
 <script type="text/javascript" src="__PUBLIC__/js/checkf.func.js"></script>
 <script type="text/javascript" src="__PUBLIC__/js/forms.func.js"></script>
 </head>
 <body>
-<div class="formHeader"> <span class="title">添加管理组</span> <a href="javascript:location.reload();" class="reload">刷新</a> </div>
+<div class="formHeader"> <span class="title">修改管理组</span> <a href="javascript:location.reload();" class="reload">刷新</a> </div>
 <form name="form" id="form" method="post" action="{:U('adminGroupUpdateSave')}" onsubmit="return cfm_admingroup();">
     <table width="100%" border="0" cellspacing="0" cellpadding="0" class="formTable">
         <tr>
@@ -29,6 +29,20 @@
                 <input type="radio" name="checkinfo" value="false" <if condition="$value['checkinfo'] eq 'false'">checked="checked"</if> />
                 未启用</td>
         </tr>
+        <if condition="$value['id'] neq 1">
+         <tr>
+            <td height="35" align="right">模块权限：</td>
+            <td><div class="purviewTitle"><strong>模块权限管理</strong></div>
+                <div class="purviewList">
+                    <foreach name="authlist" item="v"> 
+                        <span><input type="checkbox" name="model[]" value="{$v.model}" <if condition="in_array($v['model'], $adminModel)">checked="checked"</if> />
+                        {$v.description}</span>
+                    </foreach>
+                </div>
+               
+                <div class="purviewSel"><a href="javascript:;" onclick="SelModel(true)">全选</a>&nbsp;&nbsp;<a href="javascript:;" onclick="SelModel(false)">反选</a></div></td>
+        </tr>
+        </if>
     </table>
     <div class="formSubBtn">
         <input type="submit" class="submit" value="提交" />

@@ -27,7 +27,7 @@
             <td>{$v.loginip}</td>
             <td class="action endCol">
                 <span><a href="{:U('adminUpdate', array('id'=>$v['id']))}">修改</a></span> | 
-                <if condition="$v['id'] eq 1"><span class="nb">删除</span><else /><span class="nb"><a href="{:U('adminDelstate', array('id'=>$v['id']))}">删除</a></span></if></td>
+                <if condition="$v['id'] eq 1"><span class="nb">删除</span><else /><span class="nb"><a href="{:U('adminDelstate', array('id'=>$v['id']))}" onclick="return ConfDel(0);">删除</a></span></if></td>
         </tr>
     </foreach>
     </table>

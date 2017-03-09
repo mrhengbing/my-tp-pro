@@ -1,10 +1,12 @@
 <?php
 /**
  * @Author: mrhengbing
+ * @Create time:   2017-02-09 22:22:25
+ * @Last Modified by:   mrhengbing
+ * @Last Modified time: 2017-03-09 14:23:43
  * @Email:  415671062@qq.com
- * --------------后台公共函数---------------
+ * @---------后台公共函数------------
  */
-
 /*
  * 获取parentstr的第二位
  *
@@ -25,7 +27,7 @@ function getTopID($str, $i=1){
 }
 
 /**
- * TODO 基础分页的相同代码封装，使前台的代码更少
+ * 基础分页的相同代码封装，使前台的代码更少
  * @param $count 要分页的总记录数
  * @param int $pagesize 每页查询条数
  * @return \Think\Page

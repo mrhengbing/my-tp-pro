@@ -28,6 +28,18 @@
                 <input type="radio" name="checkinfo" value="false" />
                 未启用</td>
         </tr>
+        <tr>
+            <td height="35" align="right">模块权限：</td>
+            <td><div class="purviewTitle"><strong>模块权限管理</strong></div>
+                <div class="purviewList">
+                    <foreach name="authlist" item="v"> 
+                        <span><input type="checkbox" name="model[]" value="{$v.model}" />
+                        {$v.description}</span>
+                    </foreach>
+                </div>
+               
+                <div class="purviewSel"><a href="javascript:;" onclick="SelModel(true)">全选</a>&nbsp;&nbsp;<a href="javascript:;" onclick="SelModel(false)">反选</a></div></td>
+        </tr>
     </table>
     <div class="formSubBtn">
         <input type="submit" class="submit" value="提交" />
