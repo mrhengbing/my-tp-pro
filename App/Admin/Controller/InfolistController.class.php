@@ -3,13 +3,19 @@
  * @Author: mrhengbing
  * @Create time:   2017-02-15 11:13:50
  * @Last Modified by:   mrhengbing
- * @Last Modified time: 2017-03-09 14:21:43
+ * @Last Modified time: 2017-03-09 18:11:36
  * @Email:  415671062@qq.com
  * @----------文章模块控制器-------------
  */
 namespace Admin\Controller;
 use Think\Controller;
 class InfolistController extends CommonController{
+    /**
+     * 权限验证
+     */
+    function _initialize(){
+        $this->isModelAuth('infolist');
+    }
     /**
      * 文章列表页
      * @return [type] [description]

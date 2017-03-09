@@ -3,11 +3,10 @@
  * @Author: mrhengbing
  * @Create time:   2017-02-09 21:16:13
  * @Last Modified by:   mrhengbing
- * @Last Modified time: 2017-03-09 14:29:05
+ * @Last Modified time: 2017-03-09 18:11:04
  * @Email:  415671062@qq.com
  * @---------后台首页控制器------------
  */
-
 namespace Admin\Controller;
 use Think\Controller;
 class IndexController extends CommonController {

@@ -3,13 +3,19 @@
  * @Author: mrhengbing
  * @Create time:   2017-02-15 21:12:13
  * @Last Modified by:   mrhengbing
- * @Last Modified time: 2017-03-09 14:21:15
+ * @Last Modified time: 2017-03-09 18:11:22
  * @Email:  415671062@qq.com
  * @----------文章属性模块控制器-------------
  */
 namespace Admin\Controller;
 use Think\Controller;
 class InfoflagController extends CommonController{
+    /**
+     * 权限验证
+     */
+    function _initialize(){
+        $this->isModelAuth('infoclass');
+    }
     /**
      * 信息标记页
      * @return [type] [description]

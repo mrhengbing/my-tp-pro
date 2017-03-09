@@ -3,8 +3,9 @@
  * @Author: mrhengbing
  * @Create time:   2017-03-09 14:16:13
  * @Last Modified by:   mrhengbing
- * @Last Modified time: 2017-03-09 16:51:12
+ * @Last Modified time: 2017-03-09 18:10:16
  * @Email:  415671062@qq.com
+ * @-------权限模块管理--------
  */
 namespace Admin\Controller;
 use Think\Controller;
@@ -13,7 +14,7 @@ class AuthlistController extends CommonController{
      * 权限验证
      */
     function _initialize(){
-        $this->isModelAuth('adminlist');
+        $this->isModelAuth('authlist');
     }
 
     /**
