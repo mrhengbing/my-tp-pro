@@ -3,7 +3,7 @@
  * @Author: mrhengbing
  * @Create time:   2017-03-09 14:16:13
  * @Last Modified by:   mrhengbing
- * @Last Modified time: 2017-03-09 18:10:16
+ * @Last Modified time: 2017-03-09 18:14:25
  * @Email:  415671062@qq.com
  * @-------权限模块管理--------
  */
@@ -84,11 +84,6 @@ class AuthlistController extends CommonController{
     public function authlistUpdateSave(){
         if(IS_POST){
             $data = I('post.');         //接收所有数据
-            //检查是否重复
-            $check = M('authlist')->where('model="'.$data['model'].'"')->find();
-            if($check){
-                $this->error('该模块已存在');
-            }
 
             M('authlist')->save($data);      //更新数据库   
             $this->success('更新成功！', U('index'));    
