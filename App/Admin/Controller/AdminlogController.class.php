@@ -27,8 +27,8 @@ class AdminlogController extends CommonController {
 
 		$adminlog = M('adminlog');
 		$count  = $adminlog->where($where)->count();// 查询满足要求的总记录数
-        $Page   = getPage($count, 20);// 传入总记录数和每页显示的记录数(25)
-        $show   = $Page->show();// 分页显示输出
+        	$Page   = getPage($count, 20);	// 传入总记录数和每页显示的记录数(25)
+        	$show   = $Page->show();	// 分页显示输出
 
 		$this->logList = $adminlog->where($where)->order('id desc')->limit($Page->firstRow.','.$Page->listRows)->select();
 
