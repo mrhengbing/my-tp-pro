@@ -55,7 +55,15 @@
 	</tr>
 	<foreach name='logList' item='v'>
 	<tr class="dataTr">
-		<td height="36"><span class="padl10"> <span class="number">2017-03-11 21:41:16</span>：</span>用户 <strong>{$v.uname}</strong> 操作了 <span class="blue">{$v.model}</span></td>
+		<td height="36"><span class="padl10"> <span class="number">{:date('Y-m-d H:i:s', $v['posttime'])}</span>：</span>用户 <strong>{$v.uname}</strong>
+		<if condition="($v.model eq 'Login') AND ($v.action eq 'login')">
+		进行了 <span class="blue">登录操作</span>
+		<elseif condition="($v.model eq 'Index') AND ($v.action eq 'logout')" />
+		 进行了 <span class="blue">退出操作</span>
+		 <else />
+		 操作了 <span class="blue">{$v.model}</span>
+		</if>
+		 </td>
 		<td width="120">记录IP：{$v.ip}</td>
 	</tr>
 	</foreach>	
