@@ -3,7 +3,7 @@
  * @Author: mrhengbing
  * @Create time:   2017-02-09 21:16:13
  * @Last Modified by:   mrhengbing
- * @Last Modified time: 2017-03-09 18:11:04
+ * @Last Modified time: 2017-03-11 18:43:49
  * @Email:  415671062@qq.com
  * @---------后台首页控制器------------
  */
@@ -68,6 +68,8 @@ class IndexController extends CommonController {
      * @return [type] [description]
      */
     public function logout(){
+        $this->setLog();    //更新操作日志
+        
         session(null);                      //清除session
         $this->redirect('Login/index');     //跳转到登陆界面
     }

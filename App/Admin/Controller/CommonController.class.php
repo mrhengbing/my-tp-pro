@@ -3,7 +3,7 @@
  * @Author: mrhengbing
  * @Create time:   2017-02-09 10:16:13
  * @Last Modified by:   mrhengbing
- * @Last Modified time: 2017-03-09 16:04:34
+ * @Last Modified time: 2017-03-11 18:41:47
  * @Email:  415671062@qq.com
  * @---------后台公共控制器------------
  */
@@ -16,7 +16,7 @@ class CommonController extends Controller {
      */
     public function _initialize(){
         //自动运行方法
-        if(!isset($_SESSION['uid']) || !isset($_SESSION['username'])){
+        if((!isset($_SESSION['uid']) || !isset($_SESSION['username'])) && CONTROLLER_NAME!='Login'){
             $this->redirect('Login/Index');
         }
     }
@@ -35,7 +35,6 @@ class CommonController extends Controller {
 
             return $adminInfo;
     }
-
 
     /**
      * 图片上传
@@ -96,4 +95,33 @@ class CommonController extends Controller {
             return false;
         }      
     }
+
+    /**
+     * 更新操作日志
+     */
+    public function setLog(){
+        //操作日志的数据
+        $data = array(
+                'uname'     =>  $_SESSION['username'],
+                'model'     =>  CONTROLLER_NAME,
+                'action'    =>  ACTION_NAME,
+                'posttime'  =>  time(),
+                'ip'        =>  get_client_ip()
+            );
+
+        $adminlog = M('adminlog');
+        $condition['uname'] = $_SESSION['username'];
+        $condition['model'] = CONTROLLER_NAME;
+        //当前模型最近的一次操作
+        $log = $adminlog->field('posttime')->where($condition)->order('id desc')->find();
+        //更新操作日志
+        //一分钟内连续操作只记录一次
+        if(!isset($log['posttime'])){
+            $adminlog->add($data);
+        }elseif(isset($log['posttime']) && ($log['posttime']<(time()-60))){
+            $adminlog->add($data);
+        }
+            
+    }
+
 }

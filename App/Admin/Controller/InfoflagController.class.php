@@ -3,19 +3,21 @@
  * @Author: mrhengbing
  * @Create time:   2017-02-15 21:12:13
  * @Last Modified by:   mrhengbing
- * @Last Modified time: 2017-03-09 18:20:01
+ * @Last Modified time: 2017-03-11 21:36:02
  * @Email:  415671062@qq.com
  * @----------文章属性模块控制器-------------
  */
 namespace Admin\Controller;
 use Think\Controller;
-class InfoflagController extends CommonController{
+class InfoflagController extends CommonController {
     /**
-     * 权限验证
+     * 初始化
      */
     function _initialize(){
-        $this->isModelAuth('infoflag');
+        $this->isModelAuth('infoflag');    //权限验证
+        $this->setLog();    //更新操作日志
     }
+
     /**
      * 信息标记页
      * @return [type] [description]
@@ -67,7 +69,13 @@ class InfoflagController extends CommonController{
             $ids = count($id);  
             
             for($i = 0; $i < $ids; $i++){
-               M('infoflag')->where('id='.$id[$i])->setfield(array('flag'=>$flag[$i], 'flagname'=>$flagname[$i], 'orderid'=>$orderid[$i]));
+                $data = array(
+                    'flag'=>$flag[$i], 
+                    'flagname'=>$flagname[$i], 
+                    'orderid'=>$orderid[$i]
+                    );
+                $condition['id'] = $id[$i];
+               M('infoflag')->where($condition)->setfield($data);
             }
             $this->success('更新完成！', U('index'));
         }else{
@@ -83,7 +91,7 @@ class InfoflagController extends CommonController{
         $id = I('id', '', 'intval');    //属性id
 
         //删除属性
-        $result = M('infoflag')->where('id = '.$id)->delete();
+        $result = M('infoflag')->where(array('id'=>$id))->delete();
 
         if($result){
             $this->success('删除成功！', U('index'));
@@ -117,8 +125,8 @@ class InfoflagController extends CommonController{
      * @return [type] [description]  
      */
     public function updateOrderid(){
-        $id = I('id', '', 'intval');       //文章id
-        $orderid = I('orderid', '', 'intval');  //文章排序
+        $id = I('id', '', 'intval');       //属性id
+        $orderid = I('orderid', '', 'intval'); 
 
         //更改排序
         $result = M('infoflag')->where('id = '.$id)->save(array('orderid'=>$orderid));

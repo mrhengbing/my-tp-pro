@@ -3,19 +3,21 @@
  * @Author: mrhengbing
  * @Create time:   2017-02-15 11:13:50
  * @Last Modified by:   mrhengbing
- * @Last Modified time: 2017-03-09 18:11:36
+ * @Last Modified time: 2017-03-11 21:36:10
  * @Email:  415671062@qq.com
  * @----------文章模块控制器-------------
  */
 namespace Admin\Controller;
 use Think\Controller;
-class InfolistController extends CommonController{
+class InfolistController extends CommonController {
     /**
-     * 权限验证
+     * 初始化
      */
     function _initialize(){
-        $this->isModelAuth('infolist');
+        $this->isModelAuth('infolist');    //权限验证
+        $this->setLog();    //更新操作日志
     }
+
     /**
      * 文章列表页
      * @return [type] [description]
@@ -146,7 +148,7 @@ class InfolistController extends CommonController{
      */
     public function infolistUpdate(){
         $id = I('id', '', 'intval');   //文章id
-        $infolist = M('infolist');      //实例化infolist对象
+        $infolist = M('infolist');      
         $infoclass = M('infoclass');
 
         //根据id查找文章信息
@@ -275,7 +277,7 @@ class InfolistController extends CommonController{
     public function check(){
         $id = I('id', '', 'intval');    //文章id
 
-        $infoclass = M('infolist');  //实例化infolist
+        $infoclass = M('infolist');  
 
         //查询栏目状态
         $classInfo = $infoclass->field('checkinfo')->where('id = '.$id)->find();

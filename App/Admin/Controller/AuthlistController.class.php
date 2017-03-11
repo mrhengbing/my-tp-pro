@@ -3,18 +3,19 @@
  * @Author: mrhengbing
  * @Create time:   2017-03-09 14:16:13
  * @Last Modified by:   mrhengbing
- * @Last Modified time: 2017-03-09 18:14:25
+ * @Last Modified time: 2017-03-11 21:35:46
  * @Email:  415671062@qq.com
  * @-------权限模块管理--------
  */
 namespace Admin\Controller;
 use Think\Controller;
-class AuthlistController extends CommonController{
+class AuthlistController extends CommonController {
     /**
-     * 权限验证
+     * 初始化
      */
     function _initialize(){
-        $this->isModelAuth('authlist');
+        $this->isModelAuth('authlist');    //权限验证
+        $this->setLog();    //更新操作日志
     }
 
     /**
@@ -22,7 +23,7 @@ class AuthlistController extends CommonController{
      * @return [type] [description]
      */
     public function index(){
-        $authlist   =   M('authlist');      //实例化
+        $authlist   =   M('authlist');     
         $count      = $authlist->count();// 查询满足要求的总记录数
         $Page       = getPage($count,20);// 传入总记录数和每页显示的记录数(25)
         $show       = $Page->show();// 分页显示输出

@@ -3,7 +3,7 @@
  * @Author: mrhengbing
  * @Create time:   2017-02-09 11:16:13
  * @Last Modified by:   mrhengbing
- * @Last Modified time: 2017-03-09 18:01:28
+ * @Last Modified time: 2017-03-11 21:35:52
  * @Email:  415671062@qq.com
  * @---------后台管理员模块控制器------------
  */
@@ -11,10 +11,11 @@ namespace Admin\Controller;
 use Think\Controller;
 class AdminController extends CommonController {
     /**
-     * 权限验证
+     * 初始化
      */
     function _initialize(){
-        $this->isModelAuth('admin');
+        $this->isModelAuth('admin');    //权限验证
+        $this->setLog();    //更新操作日志
     }
     
     /**
@@ -22,8 +23,8 @@ class AdminController extends CommonController {
      * @return [type] [description]
      */
     public function index(){
-        $admin         =   M('admin');      //实例化admin对象
-        $admingroup    =   M('admingroup');   //实例化admingroup对象
+        $admin         =   M('admin');      
+        $admingroup    =   M('admingroup'); 
 
         $count  = $admin->where('delstate=0')->count();// 查询满足要求的总记录数
         $Page   = getPage($count,20);// 传入总记录数和每页显示的记录数(25)
@@ -110,7 +111,7 @@ class AdminController extends CommonController {
      */
     public function adminUpdate(){
         $id = I('id', '', 'intval');   //管理员id
-        $admin = M('admin');      //实例化admin对象
+        $admin = M('admin');     
         //根据id查找管理员信息
         $value = $admin->where('id='.$id)->find();
         //查找管理组列表
@@ -194,8 +195,12 @@ class AdminController extends CommonController {
     public function adminDelstate(){
         $id = I('id', '', 'intval');   //管理员id
 
+        if($id == 1){
+            $this->error('抱歉，不能删除初始账号！');
+        }
+
         if(session('uid') == $id){
-            $this->error("不能删除自己！");
+            $this->error("抱歉，不能删除自己！");
         }
 
         $data['delstate'] = 1;
@@ -213,8 +218,8 @@ class AdminController extends CommonController {
      * @return [type] [description]
      */
     public function adminRecycle(){
-        $admin = M('admin');   //实例化admin对象
-        $admingroup    =   M('admingroup');   //实例化admingroup对象
+        $admin = M('admin');   
+        $admingroup    =   M('admingroup');  
         
         $count  = $admin->where('delstate=1')->count();// 查询满足要求的总记录数
         $Page   = getPage($count,20);// 实例化分页类 传入总记录数和每页显示的记录数(25)
@@ -269,7 +274,7 @@ class AdminController extends CommonController {
      * @return [type] [description]
      */
     public function adminGroup(){
-        $adminGroup = M('admingroup');   //实例化
+        $adminGroup = M('admingroup'); 
 
         $count  = $adminGroup->count();// 查询满足要求的总记录数
         $Page   = getPage($count,20);// 实例化分页类 传入总记录数和每页显示的记录数(25)
@@ -302,7 +307,7 @@ class AdminController extends CommonController {
 
         $groupname = I('groupname');     //管理组名称
 
-        $admingroup = M('admingroup');      //实例化admingroup对象
+        $admingroup = M('admingroup');   
 
         //判断管理组名称是否存在
         $name = $admingroup->where('groupname="'.$groupname.'"')->find();
@@ -343,7 +348,7 @@ class AdminController extends CommonController {
      */
     public function adminGroupUpdate(){
         $id = I('id', '', 'intval');   //管理员id
-        $admingroup = M('admingroup');      //实例化admingroup对象
+        $admingroup = M('admingroup');  
         //根据id查找管理员信息
         $value = $admingroup->where('id='.$id)->find();
 
@@ -373,8 +378,13 @@ class AdminController extends CommonController {
 
         $id = I('id', '', 'intval');     //管理组id
         $groupname = I('groupname');     //管理组名称
+        $checkinfo = I('checkinfo');
 
-        $admingroup = M('admingroup');    //实例化admingroup对象
+        if($id == 1 and $checkinfo != 'true'){
+            $this->error('不能修改超级管理组状态！');
+        }
+
+        $admingroup = M('admingroup'); 
 
         //判断名称是否存在       
         $name = $admingroup->where('groupname="'.$groupname.'" and id<>'.$id)->find();
@@ -388,7 +398,7 @@ class AdminController extends CommonController {
                 'id'            => $id, 
                 'groupname'     => $groupname,    //管理组名称
                 'description'   => I('description'), //管理组描述
-                'checkinfo'     => I('checkinfo')      //管理组审核状态
+                'checkinfo'     =>  $checkinfo     //管理组审核状态
             );
 
         $result = $admingroup->save($data);      //更新数据
@@ -415,7 +425,9 @@ class AdminController extends CommonController {
      */
     public function adminGroupDel(){
         $id = I('id', '', 'intval');   //管理员id
-
+        if($id == 1){
+            $this->error('抱歉，不能删除超级管理组！');
+        }
         //删除管理组
         if(M('admingroup')->delete($id)){
             $this->success('删除成功！', U('adminGroup'));

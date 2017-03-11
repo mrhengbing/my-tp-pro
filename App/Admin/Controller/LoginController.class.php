@@ -3,7 +3,7 @@
  * @Author: mrhengbing
  * @Create time:   2017-02-09 8:35:10
  * @Last Modified by:   mrhengbing
- * @Last Modified time: 2017-03-09 14:22:34
+ * @Last Modified time: 2017-03-11 18:43:07
  * @Email:  415671062@qq.com
  * @----------后台登陆模块控制器-------------
  */
@@ -11,7 +11,7 @@
 namespace Admin\Controller;
 use Think\Controller;
 
-class LoginController extends Controller {
+class LoginController extends CommonController {
     /**
      * 登陆页面视图引入
      */
@@ -84,6 +84,8 @@ class LoginController extends Controller {
                 'logintime' => time()
             );
 
+        $this->setLog();    //更新操作日志
+        
         //更新登陆ip和登录时间
         M('admin')->save($data); 
 

@@ -3,7 +3,7 @@
  * @Author: mrhengbing
  * @Create time:   2017-02-10 9:12:13
  * @Last Modified by:   mrhengbing
- * @Last Modified time: 2017-03-09 14:20:17
+ * @Last Modified time: 2017-03-11 18:22:53
  * @Email:  415671062@qq.com
  * @----------栏目模块控制器-------------
  */
@@ -12,10 +12,11 @@ use Think\Controller;
 import('Class.Infoclass');
 class InfoclassController extends CommonController {
     /**
-     * 权限验证
+     * 初始化
      */
     function _initialize(){
-        $this->isModelAuth('infoclass');
+        $this->isModelAuth('infoclass');    //权限验证
+        $this->setLog();    //更新操作日志
     }
     
     /**
@@ -24,7 +25,7 @@ class InfoclassController extends CommonController {
      */
     public function index(){
         //查询所有栏目，并且模板赋值
-        $infoclass = M('infoclass')->field('id, parentid, parentstr, infotype, classname, orderid, checkinfo')->order('orderid asc')->select();
+        $infoclass = M('infoclass')->field('id, parentid, parentstr, classname, orderid, checkinfo')->order('orderid asc')->select();
         $html = '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';     //空格
         $this->infoclass = \Infoclass::infoclassForLevel($infoclass, $html);
 
@@ -114,7 +115,7 @@ class InfoclassController extends CommonController {
      */
     public function infoclassUpdate(){
         $id = I('id', '', 'intval');   //栏目id
-        $infoclass = M('infoclass');      //实例化infoclass对象
+        $infoclass = M('infoclass');     
 
         //根据id查找栏目信息
         $classInfo = $infoclass->where('id='.$id)->find();
@@ -165,7 +166,6 @@ class InfoclassController extends CommonController {
                     'id'            =>   $id,
                     'parentid'      =>   $parentid,
                     'parentstr'     =>   $parentstr,
-                    'infotype'      =>   I('infotype', '', 'intval'),
                     'classname'     =>   I('classname'),
                     'content'       =>   I('content'),
                     'seotitle'      =>   I('seotitle'),
@@ -247,7 +247,7 @@ class InfoclassController extends CommonController {
     public function check(){
         $id = I('id', '', 'intval');    //栏目id
 
-        $infoclass = M('infoclass');  //实例化infoclass
+        $infoclass = M('infoclass');  
 
         //查询栏目状态
         $classInfo = $infoclass->field('checkinfo')->where('id = '.$id)->find();

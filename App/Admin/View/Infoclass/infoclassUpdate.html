@@ -51,19 +51,19 @@ function tabs(tabobj, obj)
 <form name="form" id="form" method="post" action="{:U('infoclassUpdateSave')}" onsubmit="return cfm_infoclass();" enctype='multipart/form-data'>
     <div class="" id="tabs_content0"> 
         <table width="80%" border="0" cellspacing="0" cellpadding="0" class="formTable">
+           <!--  <tr>
+               <td width="20%" height="50" align="right">栏目类型：</td>
+               <td width="380">
+                   <select name="infotype" id="infotype">
+                       <option value="0" <if condition="$classInfo['infotype'] eq 0">selected="selected"</if>>单页</option>
+                       <option value="1" <if condition="$classInfo['infotype'] eq 1">selected="selected"</if>>文章列表</option>
+                       <option value="2" <if condition="$classInfo['infotype'] eq 2">selected="selected"</if>>图片列表</option>       
+                   </select>
+                   <span class="maroon">*</span></td>
+               <td><span class="cnote">带<span class="maroon">*</span>号表示为必填项</span></td>
+           </tr> -->
             <tr>
-                <td width="20%" height="50" align="right">栏目类型：</td>
-                <td width="380">
-                    <select name="infotype" id="infotype">
-                        <option value="0" <if condition="$classInfo['infotype'] eq 0">selected="selected"</if>>单页</option>
-                        <option value="1" <if condition="$classInfo['infotype'] eq 1">selected="selected"</if>>文章列表</option>
-                        <option value="2" <if condition="$classInfo['infotype'] eq 2">selected="selected"</if>>图片列表</option>       
-                    </select>
-                    <span class="maroon">*</span></td>
-                <td><span class="cnote">带<span class="maroon">*</span>号表示为必填项</span></td>
-            </tr>
-            <tr>
-                <td height="50" align="right">所属栏目：</td>
+                <td width="20%" height="50" align="right">所属栏目：</td>
                 <td><select name="parentid" id="parentid" onchange="GetCatpSize(this.value);">
                         <option value="0">一级栏目</option>
                         <foreach name="classList" item="v">
@@ -71,7 +71,7 @@ function tabs(tabobj, obj)
                         </foreach>
                     </select>
                     <span class="maroon">*</span></td>
-                <td>&nbsp;</td>
+                <td><span class="cnote">带<span class="maroon">*</span>号表示为必填项</span></td>
             </tr>
             <tr>
                 <td height="50" align="right">栏目名称：</td>
