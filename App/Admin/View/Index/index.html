@@ -8,22 +8,20 @@
 <title>我的网站 - 管理中心</title>
 <link href="__PUBLIC__/style/frame.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="__PUBLIC__/js/jquery.min.js"></script>
-<script type="text/javascript" src="__PUBLIC__/js/frame.js"></script>
 <script type="text/javascript" src="__PUBLIC__/js/func.js"></script>
 </head>
 <body>
 <div class="header">
     <div class="user">
         <span class="name">Hi, {$adminname}</span>&nbsp;&nbsp;&nbsp;<strong>本次登录:</strong>{$logintime}&nbsp;&nbsp;<strong>上次登录:</strong>{$admin['lastlogintime']} &nbsp;&nbsp; IP：{$logintime}  &nbsp;&nbsp;  
-        <a href="{:U('Admin/adminUpdate', array('id'=>$admin['uid']))}" class="edit" target="main">修改密码</a>&nbsp;&nbsp;
-        <a href="{:U(MODULE_NAME.'/Index/logout')}" class="logout">退出(ESC)</a>
-    
+        <a href="{:U('Admin/adminUpdate', array('id'=>$admin['id']))}" class="edit" target="main">修改密码</a>&nbsp;&nbsp;
+        <a href="{:U(MODULE_NAME.'/Index/logout')}" class="logout">退出(ESC)</a>  
     </div>
     <div class="fun">
         <div class="siteList">
                 </div>
-        <a href="../../" class="homeLink" title="首页" target="_blank">网站首页</a>
-        <a href="javascript:;" id="lockscreen" class="homeLink lockScreen" title="锁屏">锁屏</a>
+        <a href="../../" class="homeLink" title="首页" target="_blank">前台首页</a>
+        <a href="{:U('Index/home')}" class="homeLink" title="后台首页" target="main">后台首页</a>
         <a class="homeLink" title="当前时间" id="showtimes">
            <script language="javascript">show_cur_times();</script>
         </a>          
@@ -39,16 +37,6 @@
         <iframe name="main" id="main" frameborder="0" src="{:U('Index/home')}" ></iframe>
     </div>
 </div>
-<div class="lockScreenBg">
-    <div class="winBox">
-        <div class="pwd">
-            解锁密码：
-            <div><input type="password" name="password" id="password" />
-                <span onclick="CheckPwd()" class="btn">确 定</span></div>
-            <span class="note">&nbsp;</span>
-        </div>
-    </div>
-    
-</div>
+
 </body>
 </html>

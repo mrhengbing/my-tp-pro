@@ -3,7 +3,7 @@
  * @Author: mrhengbing
  * @Create time:   2017-03-11 21:33:32
  * @Last Modified by:   mrhengbing
- * @Last Modified time: 2017-03-11 22:43:24
+ * @Last Modified time: 2017-03-11 23:11:16
  * @Email:  415671062@qq.com
  * @-------管理员操作日志控制器--------
  */
@@ -27,13 +27,13 @@ class AdminlogController extends CommonController {
 
 		$adminlog = M('adminlog');
 		$count  = $adminlog->where($where)->count();// 查询满足要求的总记录数
-        	$Page   = getPage($count, 20);	// 传入总记录数和每页显示的记录数(25)
-        	$show   = $Page->show();	// 分页显示输出
+        $Page   = getPage($count, 20);				// 传入总记录数和每页显示的记录数(25)
+        $show   = $Page->show();					// 分页显示输出
 
 		$this->logList = $adminlog->where($where)->order('id desc')->limit($Page->firstRow.','.$Page->listRows)->select();
 
 		$this->page = $show;	//分页赋值
-
+		
 		$this->display();
 	}
 }

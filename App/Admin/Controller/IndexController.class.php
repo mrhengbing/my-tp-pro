@@ -3,7 +3,7 @@
  * @Author: mrhengbing
  * @Create time:   2017-02-09 21:16:13
  * @Last Modified by:   mrhengbing
- * @Last Modified time: 2017-03-11 18:43:49
+ * @Last Modified time: 2017-03-12 17:30:58
  * @Email:  415671062@qq.com
  * @---------后台首页控制器------------
  */
@@ -15,6 +15,7 @@ class IndexController extends CommonController {
      * @return [type] [description]
      */
     public function index(){
+
         //当前登陆管理员信息
         $adminInfo = $this->adminInfo();
 
@@ -60,6 +61,10 @@ class IndexController extends CommonController {
             );
         
         $this->serve = $serve;      //模板赋值
+
+        //操作日志查询
+        $this->adminlog = M('adminlog')->order('id desc')->limit(3)->select();
+
         $this->display();
     }
 
