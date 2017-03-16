@@ -3,7 +3,7 @@
  * @Author: mrhengbing
  * @Create time:   2017-02-10 9:12:13
  * @Last Modified by:   mrhengbing
- * @Last Modified time: 2017-03-11 18:22:53
+ * @Last Modified time: 2017-03-16 12:23:01
  * @Email:  415671062@qq.com
  * @----------栏目模块控制器-------------
  */
@@ -15,8 +15,8 @@ class InfoclassController extends CommonController {
      * 初始化
      */
     function _initialize(){
-        $this->isModelAuth('infoclass');    //权限验证
-        $this->setLog();    //更新操作日志
+        parent::isModelAuth('infoclass');    //权限验证
+        parent::setLog();    //更新操作日志
     }
     
     /**

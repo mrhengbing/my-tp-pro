@@ -3,7 +3,7 @@
  * @Author: mrhengbing
  * @Create time:   2017-02-09 11:16:13
  * @Last Modified by:   mrhengbing
- * @Last Modified time: 2017-03-11 21:35:52
+ * @Last Modified time: 2017-03-16 12:23:30
  * @Email:  415671062@qq.com
  * @---------后台管理员模块控制器------------
  */
@@ -14,8 +14,8 @@ class AdminController extends CommonController {
      * 初始化
      */
     function _initialize(){
-        $this->isModelAuth('admin');    //权限验证
-        $this->setLog();    //更新操作日志
+        parent::isModelAuth('admin');    //权限验证
+        parent::setLog();    //更新操作日志
     }
     
     /**

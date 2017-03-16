@@ -3,7 +3,7 @@
  * @Author: mrhengbing
  * @Create time:   2017-02-15 21:12:13
  * @Last Modified by:   mrhengbing
- * @Last Modified time: 2017-03-11 21:36:02
+ * @Last Modified time: 2017-03-16 12:24:30
  * @Email:  415671062@qq.com
  * @----------文章属性模块控制器-------------
  */
@@ -14,8 +14,8 @@ class InfoflagController extends CommonController {
      * 初始化
      */
     function _initialize(){
-        $this->isModelAuth('infoflag');    //权限验证
-        $this->setLog();    //更新操作日志
+        parent::isModelAuth('infoflag');    //权限验证
+        parent::setLog();    //更新操作日志
     }
 
     /**

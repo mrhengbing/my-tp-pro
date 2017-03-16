@@ -3,7 +3,7 @@
  * @Author: mrhengbing
  * @Create time:   2017-03-09 14:16:13
  * @Last Modified by:   mrhengbing
- * @Last Modified time: 2017-03-11 21:35:46
+ * @Last Modified time: 2017-03-16 12:24:06
  * @Email:  415671062@qq.com
  * @-------权限模块管理--------
  */
@@ -14,8 +14,8 @@ class AuthlistController extends CommonController {
      * 初始化
      */
     function _initialize(){
-        $this->isModelAuth('authlist');    //权限验证
-        $this->setLog();    //更新操作日志
+        parent::isModelAuth('authlist');    //权限验证
+        parent::setLog();    //更新操作日志
     }
 
     /**

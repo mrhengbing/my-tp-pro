@@ -3,7 +3,7 @@
  * @Author: mrhengbing
  * @Create time:   2017-02-15 11:13:50
  * @Last Modified by:   mrhengbing
- * @Last Modified time: 2017-03-11 21:36:10
+ * @Last Modified time: 2017-03-16 12:24:40
  * @Email:  415671062@qq.com
  * @----------文章模块控制器-------------
  */
@@ -14,8 +14,8 @@ class InfolistController extends CommonController {
      * 初始化
      */
     function _initialize(){
-        $this->isModelAuth('infolist');    //权限验证
-        $this->setLog();    //更新操作日志
+        parent::isModelAuth('infolist');    //权限验证
+        parent::setLog();    //更新操作日志
     }
 
     /**

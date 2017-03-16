@@ -3,7 +3,7 @@
  * @Author: mrhengbing
  * @Create time:   2017-02-09 21:16:13
  * @Last Modified by:   mrhengbing
- * @Last Modified time: 2017-03-12 17:30:58
+ * @Last Modified time: 2017-03-16 12:24:55
  * @Email:  415671062@qq.com
  * @---------后台首页控制器------------
  */
@@ -17,7 +17,7 @@ class IndexController extends CommonController {
     public function index(){
 
         //当前登陆管理员信息
-        $adminInfo = $this->adminInfo();
+        $adminInfo = parent::adminInfo();
 
         //判断昵称是否为空，如果为空则使用昵称，否则使用用户名
         if(!empty($adminInfo['nickname'])){
@@ -73,7 +73,7 @@ class IndexController extends CommonController {
      * @return [type] [description]
      */
     public function logout(){
-        $this->setLog();    //更新操作日志
+        parent::setLog();    //更新操作日志
         
         session(null);                      //清除session
         $this->redirect('Login/index');     //跳转到登陆界面
