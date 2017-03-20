@@ -3,7 +3,7 @@
  * @Author: mrhengbing
  * @Create time:   2017-02-15 11:13:50
  * @Last Modified by:   mrhengbing
- * @Last Modified time: 2017-03-16 12:24:40
+ * @Last Modified time: 2017-03-21 00:07:08
  * @Email:  415671062@qq.com
  * @----------文章模块控制器-------------
  */
@@ -14,7 +14,7 @@ class InfolistController extends CommonController {
      * 初始化
      */
     function _initialize(){
-        parent::isModelAuth('infolist');    //权限验证
+       // parent::isModelAuth('infolist');    //权限验证
         parent::setLog();    //更新操作日志
     }
 
@@ -122,10 +122,11 @@ class InfolistController extends CommonController {
             $data['flag'] = $flag;
 
             //获取图片路径
-            if(isset($_FILES['picurl']['name']) && $_FILES['picurl']['name']!=''){
-                $picurl = self::uploadify();
+            /*if(isset($_FILES['picurl']['name']) && $_FILES['picurl']['name']!=''){
+                $picurl = parent::imgUpload();
                 $data['picurl'] = $picurl;
-            }
+            }*/
+            $data['picurl'] = parent::uploadify() != '' ? parent::uploadify() : '';
 
             //将时间转化为时间戳
             $data['posttime'] = strtotime($_POST['posttime']);
@@ -178,6 +179,8 @@ class InfolistController extends CommonController {
         $flag = M('infoflag')->select();
         $this->flag = $flag;
 
+        $time=date(DATE_RFC822);
+        $this->assign('time',$time);
         $this->display();
     }
 
@@ -217,16 +220,21 @@ class InfolistController extends CommonController {
                 );
 
             //获取图片路径
-            if(isset($_FILES['picurl']['name']) && $_FILES['picurl']['name']!=''){
-                $picurl = self::uploadify();
+            /*if(isset($_FILES['picurl']['name']) && $_FILES['picurl']['name']!=''){
+                $picurl = parent::imgUpload();
                 $data['picurl'] = $picurl;
-            }
+            }*/
 
             //将时间转化为时间戳
             $data['posttime'] = strtotime($data['posttime']);
 
-            //更新数据库
+            //判断是否有图片上传
+            if(I('picurl') != ''){
+                $data['picurl'] = I('picurl');     
+            }
+
             M('infolist')->save($data);
+        
             $this->success('修改成功！', U('index'));
         }else{
             $this->error('页面不存在！');
@@ -308,9 +316,8 @@ class InfolistController extends CommonController {
             $data = M('infolist')->field('orderid')->where('id = '.$id)->find();
             return $data['orderid'];
         }
-
     }
-    
+   
 }
 
 

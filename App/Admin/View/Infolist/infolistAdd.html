@@ -20,7 +20,9 @@
       serverUrl: "__ROOT__/Plugin/ueditor/php/controller.php"
     });  
   });     
-</script>    
+</script>  
+<link rel="stylesheet" type="text/css" href="__ROOT__/Plugin/uploadify/uploadify.css">
+<script src="__ROOT__/Plugin/uploadify/jquery.uploadify.min.js" type="text/javascript"></script>  
 </head>
 <body>
 <div class="formHeader"> <span class="title">添加文章信息</span> <a href="javascript:location.reload();" class="reload">刷新</a> </div>
@@ -70,9 +72,8 @@
       </tr> -->
         <tr>
             <td height="40" align="right">缩略图片：</td>
-            <td><input name="picurl" type="file" id="picurl" class="input" value="" />
-                    </td>
-                <td><div id="img"></div></td>
+            <td><input type="hidden" name="picurl" id="picurl" value="" /><input id="file_upload" name="file_upload" type="file" multiple="true" />
+            </td><td><div id="image" class="image"></div></td>
         </tr>
      <!--    <tr>
          <td height="40" align="right">跳转链接：</td>
@@ -148,5 +149,25 @@
         <input type="button" class="back" value="返回" onclick="history.go(-1);" />
     </div>
 </form>
+<script type="text/javascript">
+$(function() {
+      $('#file_upload').uploadify({
+            'fileTypeExts' : '*.gif; *.jpg; *.png',   //允许类型
+            'fileSizeLimit' : '3MB',          //允许上传最大值
+        'swf'      : '__ROOT__/Plugin/uploadify/uploadify.swf', //加载swf
+        'uploader' : '{:U("uploadify","","")}',          //上传路径
+        'buttonText' :'文件上传',                 //按钮的文字
+
+        'onUploadSuccess' : function(file, data, response) {      //成功上传返回
+              var n=parseInt(Math.random()*100);                //100以内的随机数
+              //alert(n+data);
+              //插入到image标签内，显示图片的缩略图
+          $('#image').html('<a href="__ROOT__/'+data+'" target="_blank"><img src="__ROOT__/'+data+'"  height="100" width="80" /></a>');
+          $('#picurl').val(data);
+        }   
+
+      });
+    });
+</script>
 </body>
 </html>

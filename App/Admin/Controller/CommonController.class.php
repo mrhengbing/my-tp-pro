@@ -3,7 +3,7 @@
  * @Author: mrhengbing
  * @Create time:   2017-02-09 10:16:13
  * @Last Modified by:   mrhengbing
- * @Last Modified time: 2017-03-12 16:47:57
+ * @Last Modified time: 2017-03-21 00:04:38
  * @Email:  415671062@qq.com
  * @---------后台公共控制器------------
  */
@@ -28,6 +28,7 @@ class CommonController extends Controller {
     static public function adminInfo(){
             //获取session
             $adminSession = session();
+
             //查找管理员表
             $admin = M('admin');
             $condition['id'] = $adminSession['uid'];
@@ -37,10 +38,10 @@ class CommonController extends Controller {
     }
 
     /**
-     * 图片上传
+     * 图片普通上传处理
      * @return [type] [description]
      */
-    public function uploadify(){
+    public function imgUpload(){
          if (!empty($_FILES)) {
             //图片上传设置
             $config = array(   
@@ -55,13 +56,57 @@ class CommonController extends Controller {
             //判断是否有图
             if($images){
                 $picurl = $images['picurl']['savepath'].$images['picurl']['savename'];
-                //返回文件地址和名给JS作回调用
+                //返回文件地址和名
                 return $picurl;
             }else{
                 //$this->error($upload->getError());//上传失败
             }
         }
     }
+
+    /**
+     * 图片异步上传处理
+     * @return [type] [description]
+     */
+   public function uploadify(){
+        if (!empty($_FILES)) {
+            //图片上传设置
+            $config = array(   
+                'savePath'   =>    '',  
+                'saveName'   =>    array('uniqid',''), 
+                'exts'       =>    array('jpg', 'gif', 'png', 'jpeg'),  
+                'autoSub'    =>    true,   
+                'subName'    =>    array('date','Ymd'),
+            );
+            $upload = new \Think\Upload($config);// 实例化上传类
+            $images = $upload->upload();
+            //判断是否有图
+            if($images){
+                $picurl = 'Uploads/'.$images['Filedata']['savepath'].$images['Filedata']['savename'];
+                //返回文件地址和名
+                echo $picurl;
+            }else{
+                //$this->error($upload->getError());//上传失败
+            }
+        }
+    }
+
+
+    public function del(){
+        if($_POST['name']!=""){
+            $info = explode("/", $_POST['name']);
+            //count($info)
+            $url='./Public/upload/'.$info[count($info)-1];
+            if(unlink($url)){
+                $this->success("success");
+            }
+            else
+                $this->error("unlink fail");
+            }
+        else
+            $this->error("info is gap");
+    }
+    
 
     /**
      * 验证模块权限

@@ -7,20 +7,23 @@
 <link href="__ROOT__/Plugin/calendar/calendar-blue.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="__PUBLIC__/js/jquery.min.js"></script>
 <script type="text/javascript" src="__PUBLIC__/js/checkf.func.js"></script>
+<!-- <script type="text/javascript" src="__PUBLIC__/js/getuploadify.js"></script> -->
 <script type="text/javascript" src="__ROOT__/Plugin/calendar/calendar.js"></script> 
 <script type="text/javascript" src="__ROOT__/Plugin/ueditor/ueditor.config.js"></script>
 <script type="text/javascript" src="__ROOT__/Plugin/ueditor/ueditor.all.min.js"></script>
 <script type="text/javascript" src="__ROOT__/Plugin/ueditor/lang/zh-cn/zh-cn.js"></script> 
 <script type="text/javascript" charset="utf-8">  
-    window.UEDITOR_HOME_URL = "__ROOT__/Plugin/ueditor/";  
-    $(document).ready(function () {  
+  window.UEDITOR_HOME_URL = "__ROOT__/Plugin/ueditor/";  
+  $(document).ready(function () {  
       UE.getEditor('content', { 
       initialFrameHeight: 300,  
       initialFrameWidth: 800,   
       serverUrl: "__ROOT__/Plugin/ueditor/php/controller.php"
     });  
-  });     
-</script>      
+  });
+</script> 
+<link rel="stylesheet" type="text/css" href="__ROOT__/Plugin/uploadify/uploadify.css">
+<script src="__ROOT__/Plugin/uploadify/jquery.uploadify.min.js" type="text/javascript"></script>
 </head>
 <body>
 <div class="formHeader"> <span class="title">修改文章信息</span> <a href="javascript:location.reload();" class="reload">刷新</a> </div>
@@ -71,12 +74,17 @@
       </tr> -->
       </table>
       <table width="100%" border="0" cellspacing="0" cellpadding="0" class="formTable">
-        <tr>
+        <!-- <tr>
             <td width="25%" height="120" align="right">缩略图片：</td>
             <td width="320"><input name="picurl" type="file" id="picurl" class="input" value="{$classInfo.picurl}" />
                     </td>
-                <td><if condition="$articleInfo['picurl'] neq ''"><img src="__ROOT__/Uploads/{$articleInfo.picurl}" alt="" height="100" /></if></td>
-        </tr>
+                <td><if condition="$articleInfo['picurl'] neq ''"><img src="__ROOT__/Uploads/{$articleInfo.picurl}" alt="" height="100" /></if></div></td>
+        </tr> -->
+        <tr>
+      <td width="25%" height="40" align="right">缩略图片：</td>
+      <td><input type="hidden" name="picurl" id="picurl" class="input" value="" /><input id="file_upload" name="file_upload" type="file" multiple="true" />
+      </td><td><div id="image" class="image"><if condition="$articleInfo['picurl'] neq ''"><a href="__ROOT__/Uploads/{$articleInfo.picurl}" target="_blank"><img src="__ROOT__/Uploads/{$articleInfo.picurl}"  height="100" width="80" /></a></if></div></td>
+    </tr>
         </table>
         <div class="clear"></div>
         <table width="100%" border="0" cellspacing="0" cellpadding="0" class="formTable">
@@ -104,15 +112,15 @@
                </td>
                <td>&nbsp;</td>
         </tr>
-      <!--   <tr class="nb">
-          <td height="124" align="right">组　图：</td>
-          <td><fieldset class="picarr">
-                  <legend>列表</legend>
-                  <div>最多可以上传<strong>50</strong>张图片<span onclick="GetUploadify('uploadify2','组图上传','image','image',50,2097152,'picarr','picarr_area')">开始上传</span></div>
-                  <ul id="picarr_area">
-                                          </ul>
-              </fieldset></td>
-      </tr> -->
+       <!--  <tr class="nb">
+         <td height="124" align="right">组　图：</td>
+         <td><fieldset class="picarr">
+                 <legend>列表</legend>
+                 <div>最多可以上传<strong>50</strong>张图片<span onclick="GetUploadify('uploadify2','组图上传','image','image',50,2097152,'picarr','picarr_area')">开始上传</span></div>
+                 <ul id="picarr_area">
+                                         </ul>
+             </fieldset></td>
+             </tr>  -->
         <tr class="nb">
             <td colspan="3" height="26"><div class="line"> </div></td>
         </tr>
@@ -156,5 +164,25 @@
         <input type="hidden" name="id" id="id" value="{$articleInfo['id']}" />
     </div>
 </form>
+<script type="text/javascript">
+$(function() {
+      $('#file_upload').uploadify({
+            'fileTypeExts' : '*.gif; *.jpg; *.png',   //允许类型
+            'fileSizeLimit' : '3MB',          //允许上传最大值
+        'swf'      : '__ROOT__/Plugin/uploadify/uploadify.swf', //加载swf
+        'uploader' : '{:U("uploadify","","")}',          //上传路径
+        'buttonText' :'文件上传',                 //按钮的文字
+
+        'onUploadSuccess' : function(file, data, response) {      //成功上传返回
+              var n=parseInt(Math.random()*100);                //100以内的随机数
+              //alert(n+data);
+              //插入到image标签内，显示图片的缩略图
+          $('#image').html('<a href="__ROOT__/'+data+'" target="_blank"><img src="__ROOT__/'+data+'"  height="100" width="80" /></a>');
+          $('#picurl').val(data);
+        }   
+
+      });
+    });
+</script>
 </body>
 </html>
