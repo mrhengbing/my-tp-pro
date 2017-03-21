@@ -165,7 +165,7 @@ $(function() {
         'buttonText' :'文件上传',                 //按钮的文字
         'onUploadSuccess' : function(file, data, response) {      //成功上传返回
           //插入到image标签内，显示图片的缩略图
-          $('#image').html('<a href="__ROOT__/'+data+'" target="_blank"><img src="__ROOT__/'+data+'"  height="100" /></a>');
+          $('#image').html('<a href="__ROOT__/'+data+'" target="_blank"><img src="__ROOT__/'+data+'" height="100" /></a>');
           $('#picurl').val(data);
         }   
 

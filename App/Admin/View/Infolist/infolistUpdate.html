@@ -83,7 +83,7 @@
         <tr>
       <td width="25%" height="40" align="right">缩略图片：</td>
       <td><input type="hidden" name="picurl" id="picurl" class="input" value="" /><input id="file_upload" name="file_upload" type="file" multiple="true" />
-      </td><td><div id="image" class="image"><if condition="$articleInfo['picurl'] neq ''"><a href="__ROOT__/Uploads/{$articleInfo.picurl}" target="_blank"><img src="__ROOT__/Uploads/{$articleInfo.picurl}"  height="100" width="80" /></a></if></div></td>
+      </td><td><div id="image" class="image"><if condition="$articleInfo['picurl'] neq ''"><a href="__ROOT__/{$articleInfo.picurl}" target="_blank"><img src="__ROOT__/{$articleInfo.picurl}"  height="100" width="80" /></a></if></div></td>
     </tr>
         </table>
         <div class="clear"></div>
