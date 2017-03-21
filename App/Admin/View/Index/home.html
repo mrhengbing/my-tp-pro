@@ -39,9 +39,9 @@
             <ul>
             <foreach name='adminlog' item='v'>
                <li>{:date('m-d H:i', $v['posttime'])}：用户 <strong>{$v.uname}</strong> 
-               <if condition="($v.model eq 'Login') AND ($v.action eq 'login')">
+               <if condition="($v.model eq 'Login') && ($v.action eq 'login')">
                进行了 <span class="blue">登录操作</span> 
-                <elseif condition="($v.model eq 'Index') AND ($v.action eq 'logout')">
+                <elseif condition="($v.model eq 'Index') && ($v.action eq 'logout')" />
                 进行了 <span class="blue">退出操作</span> 
                 <else />
                 操作了 <span class="blue">{$v.model}</span>

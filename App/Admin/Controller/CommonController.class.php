@@ -3,7 +3,7 @@
  * @Author: mrhengbing
  * @Create time:   2017-02-09 10:16:13
  * @Last Modified by:   mrhengbing
- * @Last Modified time: 2017-03-21 00:04:38
+ * @Last Modified time: 2017-03-21 16:11:49
  * @Email:  415671062@qq.com
  * @---------后台公共控制器------------
  */
@@ -69,7 +69,9 @@ class CommonController extends Controller {
      * @return [type] [description]
      */
    public function uploadify(){
-        if (!empty($_FILES)) {
+        $verifyToken = md5('unique_salt'.$_POST['timestamp']);
+
+        if (!empty($_FILES) && $_POST['token'] == $verifyToken) {
             //图片上传设置
             $config = array(   
                 'savePath'   =>    '',  

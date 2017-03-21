@@ -167,17 +167,20 @@
 <script type="text/javascript">
 $(function() {
       $('#file_upload').uploadify({
-            'fileTypeExts' : '*.gif; *.jpg; *.png',   //允许类型
-            'fileSizeLimit' : '3MB',          //允许上传最大值
-        'swf'      : '__ROOT__/Plugin/uploadify/uploadify.swf', //加载swf
-        'uploader' : '{:U("uploadify","","")}',          //上传路径
+        'formData'     : {
+          'session_id'  : '{:session_id()}',
+          'timestamp'   : '{:time()}',
+          'token'       : '{:md5("unique_salt".time())}'
+        },
+        'fileTypeExts' : '*.gif; *.jpg; *.png',   //允许类型
+        'fileSizeLimit' : '3MB',          //允许上传最大值
+        'swf'      : '__ROOT__/Plugin/uploadify/uploadify.swf?var='+ (new Date()).getTime(), //加载swf
+        'method': 'PSOT',
+        'uploader' : '{:U("Common/uploadify","","")}',            //上传路径
         'buttonText' :'文件上传',                 //按钮的文字
-
         'onUploadSuccess' : function(file, data, response) {      //成功上传返回
-              var n=parseInt(Math.random()*100);                //100以内的随机数
-              //alert(n+data);
-              //插入到image标签内，显示图片的缩略图
-          $('#image').html('<a href="__ROOT__/'+data+'" target="_blank"><img src="__ROOT__/'+data+'"  height="100" width="80" /></a>');
+          //插入到image标签内，显示图片的缩略图
+          $('#image').html('<a href="__ROOT__/'+data+'" target="_blank"><img src="__ROOT__/'+data+'" height="100" /></a>');
           $('#picurl').val(data);
         }   
 
